@@ -134,6 +134,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 1920px;
   padding: 0px 261px 0px 261px;
 }
 
