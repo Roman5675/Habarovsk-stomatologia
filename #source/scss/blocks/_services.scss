@@ -1,0 +1,177 @@
+//Section services-intro start
+.services-intro {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 65px;
+}
+
+.services-intro__text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+    margin-bottom: 146px;
+    padding-right: 115px;
+}
+.services-intro__text-title {
+    font-size: 87px;
+}
+.services-intro__text-subtitle {
+    font-size: 46px;
+    max-width: 665px;
+}
+.services-intro__images {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 115px;
+    margin-bottom: 130px;
+}
+.services-intro__images-left {
+    padding-top: 61px;
+}
+.services-intro__images-right {
+}
+.services-intro__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 103px;
+    background: linear-gradient(white, white) padding-box, 
+                    linear-gradient(90deg, #f857a6, #923362) border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 51.5px;
+}
+.services-intro__link-text {
+    font-size: 37px;
+    background: linear-gradient(270deg, #f857a6 0%, #923362 100%);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+//Section services-intro end
+
+//Section services-cards start
+.services-cards {
+    margin-bottom: 65px;
+}
+.services-cards__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 107px;
+    row-gap: 92px;
+}
+.services-cards__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 53px;
+    background: linear-gradient(164deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(253, 88, 119, 0.65) 55%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
+    border-radius: 50px;
+    padding-top: 65px;
+    padding-bottom: 54px;
+    padding-left: 77px;
+    padding-right: 77px;
+    
+}
+
+.services-cards__title {
+    font-size: 50px;
+    text-align: center;
+}
+.services-cards__subtitle {
+    font-size: 37px;
+    max-width: 507px;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: -1.27px;
+    
+}
+//Section services-cards end
+
+//Section services-why start
+.services-why {
+    margin-bottom: 65px;
+}
+
+.services-why__body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 112px;
+    padding-right: 170px;
+    padding-bottom: 146px;
+    padding-left: 50px;
+    border-radius: 100px;
+    position: relative; /* необходим для корректной работы box-shadow */
+    box-shadow: 0 0 20px rgba(235, 69, 146, 0.5);
+    margin-bottom: 165px;
+    .services-why__item:nth-child(1) {
+        margin-bottom: 133px;
+    }
+    .services-why__item:nth-child(2) {
+        margin-bottom: 142px;
+    }
+    .services-why__item:nth-child(3) {
+        margin-bottom: 180px;
+    }
+}
+.services-why__item {
+    display: flex;
+    gap: 61px;
+}
+
+.services-why__image {
+    
+}
+.services-why__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 125px;
+}
+.services-why__title {
+    font-size: 65px;
+    white-space: nowrap;
+    letter-spacing: -4.66px;
+}
+.services-why__subtitle {
+    font-size: 50px;
+    letter-spacing: -4.66px;
+}
+
+.services-why__link {
+    height: 286px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(126deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(252, 88, 134, 0.83) 42.57%, rgba(253, 88, 119, 0.65) 59.9%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
+    border-radius: 0px 0px 50px 50px;
+}
+.services-why__link-text {
+    font-size: 65px;
+}
+//Section services-why end
+
+//Section services-child start
+.services-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 238px;
+    margin-bottom: 130px;
+}
+.services-child__logo {
+}
+.services-child__title {
+    font-size: 60px;
+}
+.services-child__subtitle {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 300;
+}
+.services-child__round-image {
+}
+//Section services-child end

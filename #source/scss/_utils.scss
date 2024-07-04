@@ -1,0 +1,22 @@
+//Тут будут утилитарные функции, такие как container, visually hidden...
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1920px;
+    margin-inline: auto; //Центрирование контейнера
+    padding-inline: 261px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( padding-inline ,261,7.9,1920,320 );
+    }
+}

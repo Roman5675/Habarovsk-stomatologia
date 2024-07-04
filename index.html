@@ -6,249 +6,392 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Шаблон сайт</title>
 	<meta name="description" content="" />
-	<link rel="stylesheet" href="./css/style.css" />
-	<script src="https://api-maps.yandex.ru/v3/?apikey=f5147383-16e0-4746-957d-6cb99ba97231&lang=ru_RU"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
-	<div class="wrapper">
+<header class="header container">
+    <div class="header__inner">
+        <a class="header__logo logo" href="/">
+            <img class="logo__image" src="./img/svg/logo.svg" alt="stomekspert" width="263" height="110" loading="lazy">
+        </a>
+        
+        <nav class="header__menu hidden-mobile">
+            <ul class="header__menu-list">
+                <li class="header__menu-item">
+                    <a href="./index.html" class="header__menu-link">ГЛАВНАЯ</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="./about.html" class="header__menu-link">О НАС</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="./command.html" class="header__menu-link">КОМАНДА</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="https://yandex.ru/maps/org/stomekspert/1024933200/reviews/?ll=135.098543%2C48.460032&mode=search&sctx=ZAAAAAgBEAAaKAoSCecXJegvjkRAEUeq7%2FyiYklAEhIJBHRfzmzfI0AR2gHXFTNSEEAiBgABAgMEBSgKOABAj6ANSAFiHnJlbGV2X3NlcnZpY2VfYXJlYV9wZXJjZW50PTEwMGoCcnWdAc3MTD2gAQCoAQC9AXsUfA7CAQXQ%2BtzoA4ICFtGB0YLQvtC80Y3QutGB0L%2FQtdGA0YKKAgCSAgCaAgxkZXNrdG9wLW1hcHM%3D&sll=135.098543%2C48.460032&source=serp_navig&sspn=0.008331%2C0.003588&tab=reviews&text=%D1%81%D1%82%D0%BE%D0%BC%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82&z=17.3" class="header__menu-link">ОТЗЫВЫ</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="./services.html" class="header__menu-link">УСЛУГИ</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="./contacts.html" class="header__menu-link">КОНТАКТЫ</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="./documents.html" class="header__menu-link">ДОКУМЕНТЫ</a>
+                </li>
+            </ul>
+        </nav>
 
-		<header class="header">
-			<div class="header__row">
-				<div class="header__logo">
-					<a href="/">
-						<img src="./img/svg/logo.svg" alt="#">
-					</a>
-				</div>
-				<div class="header__menu menu">
-					<div class="menu__icon">
-						<p>Menu</p>
+        
+        <button class="button__burger-menu burger-button visible-mobile" type="button" onclick="mobileOverlay.showModal()">
+            <span class="visually-hidden">Open navigation menu</span>
+            <p>Menu</p>
+        </button>
+    </div>
+</header>
+
+<dialog class="mobile-overlay visible mobile" id="mobileOverlay">
+    <form class="mobile-overlay__close-button-wrapper" method="dialog">
+        <button class="mobile-overlay__close-button cross-button" type="submit">
+            <span class="visually-hidden">Close navigation menu</span>
+        </button>
+    </form>
+    <div class="mobile-overlay__body">
+        <ul class="mobile-overlay__list">
+            <li class="mobile-overlay__item">
+                <a href="/" class="mobile-overlay__link">ГЛАВНАЯ</a>
+            </li>
+            <li class="mobile-overlay__item">
+                <a href="/" class="mobile-overlay__link">О НАС</a>
+            </li>
+            <li class="mobile-overlay__item">
+                <a href="/" class="mobile-overlay__link">КОМАНДА</a>
+            </li>
+            <li class="mobile-overlay__item">
+                <a href="/" class="mobile-overlay__link">ОТЗЫВЫ</a>
+            </li>
+            <li class="mobile-overlay__item">
+                <a href="/" class="mobile-overlay__link">УСЛУГИ</a>
+            </li>
+            <li class="mobile-overlay__item">
+                <a href="/" class="mobile-overlay__link">КОНТАКТЫ</a>
+            </li>
+            <li class="mobile-overlay__item">
+                <a href="/" class="mobile-overlay__link">ДОКУМЕНТЫ</a>
+            </li>
+        </ul>
+    </div>
+</dialog>
+
+
+	<main class="content container">
+			<section class="signup">
+				<div class="signup__row">
+					<div class="signup__title">
+						<h2>Мы запустили свой сайт, теперь мы сможем прийти на помощь еще быстрее</h2>
 					</div>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li>
-								<a href="#" class="menu__link">ГЛАВНАЯ</a>
-							</li>
-							<li>
-								<a href="#" class="menu__link">О НАС</a>
-							</li>
-							<li>
-								<a href="#" class="menu__link">КОМАНДА</a>
-							</li>
-							<li>
-								<a href="#" class="menu__link link">ОТЗЫВЫ</a>
-							</li>
-							<li>
-								<a href="#" class="menu__link link">УСЛУГИ</a>
-							</li>
-							<li>
-								<a href="#" class="menu__link link">КОНТАКТЫ</a>
-							</li>
-							<li>
-								<a href="#" class="menu__link link">ДОКУМЕНТЫ</a>
-							</li>
-						</ul>
-					</nav>
+					<div class="signupsubtitle">
+						<p>Наш новый сайт делает стоматологию удобнее! Запишитесь на прием, получите консультацию и узнайте стоимость услуг — всё это онлайн, быстро и легко. Экономьте время и дарите улыбку себе с помощью пары кликов!</p>
+					</div>
+					<div class="signup__button">
+						<p>Записаться</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="slider">
+				<div class="price-slider swiper">
+					<div class="price-slider__wrapper swiper-wrapper">
+
+						<div class="price-slider__slide swiper-slide">
+							<div class="price-slider__image">
+								<img src="./img/png/slider.png" alt="#" class="price__image-card">
+							</div>
+						</div>
+
+						<div class="price-slider__slide swiper-slide">
+							<div class="price-slider__image">
+								<img src="./img/png/slider.png" alt="#" class="price__image-card">
+							</div>
+						</div>
+
+						<div class="price-slider__slide swiper-slide">
+							<div class="price-slider__image">
+								<img src="./img/png/slider.png" alt="#" class="price__image-card">
+							</div>
+						</div>
+
+						<div class="price-slider__slide swiper-slide">
+							<div class="price-slider__image">
+								<img src="./img/png/slider.png" alt="#" class="price__image-card">
+							</div>
+						</div>
+
+						<div class="price-slider__slide swiper-slide">
+							<div class="price-slider__image">
+								<img src="./img/png/slider.png" alt="#" class="price__image-card">
+							</div>
+						</div>
+
+						<div class="price-slider__slide swiper-slide">
+							<div class="price-slider__image">
+								<img src="./img/png/slider.png" alt="#" class="price__image-card">
+							</div>
+						</div>
+
+						
+
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</section>
+
+			<section class="advantage">
+				<h2 class="advantage__header">Преимущества</h2>
+				<div class="advantage__items">
+
+					<div class="advantage__item">
+						<img class="advantage__image" src="./img/png/main/advantage-1.png" alt="/">
+						<h3 class="advantage__title">Онлайн запись 24/7</h3>
+						<p class="advantage__subtitle">Записывайтесь на прием в любое удобное для вас время без звонков и ожидания.</p>
+						<button class="advantage__button">
+							<p>Записаться</p>
+						</button>
+					</div>
+
+					<div class="advantage__item">
+						<img class="advantage__image" src="./img/png/main/advantage-2.png" alt="/">
+						<h3 class="advantage__title">Полный каталог услуг</h3>
+						<p class="advantage__subtitle">Исследуйте широкий спектр стоматологических услуг и методов лечения.</p>
+						<button class="advantage__button">
+							<p>Узнать</p>
+						</button>
+					</div>
+
+					<div class="advantage__item">
+						<img class="advantage__image" src="./img/png/main/advantage-3.png" alt="/">
+						<h3 class="advantage__title">Информация о специалистах</h3>
+						<p class="advantage__subtitle">Ознакомьтесь с профилями наших ведущих специалистов, их квалификацией и опытом работы.</p>
+						<button class="advantage__button">
+							<p>Познакомиться</p>
+						</button>
+					</div>
+
+					<div class="advantage__item">
+						<img class="advantage__image" src="./img/png/main/advantage-4.png" alt="/">
+						<h3 class="advantage__title">Система отзывов</h3>
+						<p class="advantage__subtitle">Читайте отзывы наших пациентов и делитесь своими впечатлениями о посещении клиники.</p>
+						<button class="advantage__button">
+							<p>Посмотреть отзывы</p>
+						</button>
+					</div>
+
+					<div class="advantage__item">
+						<img class="advantage__image" src="./img/png/main/advantage-5.png" alt="/">
+						<h3 class="advantage__title">Прозрачность цен</h3>
+						<p class="advantage__subtitle">Информация о стоимости услуг всегда доступна на нашем сайте для вашего удобства.</p>
+						<button class="advantage__button">
+							<p>Узнать</p>
+						</button>
+					</div>
+
+					<div class="advantage__item">
+						<img class="advantage__image" src="./img/png/main/advantage-6.png" alt="/">
+						<h3 class="advantage__title">Узнайте нас ближе</h3>
+						<p class="advantage__subtitle">Откройте для себя нашу клинику, где забота и профессионализм встречаются каждый день</p>
+						<button class="advantage__button">
+							<p>Узнать</p>
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="installment">
+				<h2></h2>
+				<div class="installment__row">
+					<div class="installment__left-row">
+						<h3>Рассрочка</h3>
+						<button class="installment__button">
+							<p>Оформить</p>
+						</button>
+					</div>
+					<div class="installment__right-row">
+						<h3>0%</h3>
+						<p>Можно оформить онлайн сейчас, и выбрать день посещения клиники</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<h2 class="services__header">Услуги</h2>
+				<div class="services__cards">
+					<div class="services__card">
+						<img class="services__image" src="./img/png/main/services-1.png" alt="/">
+						<h3 class="services__title"></h3>
+						<button class="services__button"></button>
+					</div>
+
+					<div class="services__card">
+						<img class="services__image" src="./img/png/main/services-2.png" alt="/">
+						<h3 class="services__title"></h3>
+						<button class="services__button"></button>
+					</div>
+
+					<div class="services__card">
+						<img class="services__image" src="./img/png/main/services-3.png" alt="/">
+						<h3 class="services__title"></h3>
+						<button class="services__button"></button>
+					</div>
+
+					<div class="services__card">
+						<img class="services__image" src="./img/png/main/services-4.png" alt="/">
+						<h3 class="services__title"></h3>
+						<button class="services__button"></button>
+					</div>
+
+					<div class="services__card">
+						<img class="services__image" src="./img/png/main/services-5.png" alt="/">
+						<h3 class="services__title"></h3>
+						<button class="services__button"></button>
+					</div>
+
+					<div class="services__card">
+						<img class="services__image" src="./img/png/main/services-6.png" alt="/">
+						<h3 class="services__title"></h3>
+						<button class="services__button"></button>
+					</div>
+
+					<div class="services__card">
+						<img class="services__image" src="./img/png/main/services-7.png" alt="/">
+						<h3 class="services__title"></h3>
+						<button class="services__button"></button>
+					</div>
+
+					<div class="services__card">
+						<img class="services__image" src="./img/png/main/services-8.png" alt="/">
+						<h3 class="services__title"></h3>
+						<button class="services__button"></button>
+					</div>
+				</div>
+
+			</section>
+
+			<section class="meet">
+				<h2 class="meet__header">Познакомьтесь с нашими специалистами</h2>
+				<div class="meet__row">
+					<img src="./img/png/main/meet.png" alt="" class="meet__image">
+					<div class="meet__row-right">
+						<p class="meet__text">Ваша улыбка — в надежных руках. Узнайте больше о нашей команде профессионалов, каждый из которых стремится обеспечить вам лучший уход и комфортное лечение</p>
+						<button class="meet__button">Познакомиться</button>
+					</div>
+				</div>
+			</section>
+
+			<setcion class="welcome">
+				<h2></h2>
+				<div class="welcome__column">
+					<div class="welcome__first-row">
+						<p class="welcome__first-row-text-left">Добро пожаловать в СТОМ ЭКСПЕРТ: Клинику, где забота и профессионализм встречаются</p>
+						<p class="welcome__first-row-text-right">Мы гордимся нашими ценностями и высоким уровнем сервиса. Узнайте больше о нашей миссии, истории и том, что делает нашу клинику уникальной</p>
+					</div>
+					<div class="welcome__second-row">
+						<div class="welcome__card">
+							<p class="welcome__text">счастливых пациентов</p>
+							<h3 class="welcome__title">10 000 +</h3>
+						</div>
+
+						<div class="welcome__card">
+							<p class="welcome__text">пациентов рекомендуют </p>
+							<h3 class="welcome__title">100 %</h3>
+						</div>
+
+						<div class="welcome__card wide">
+							<p class="welcome__text">лет опыта в стоматологии</p>
+							<h3 class="welcome__title">20 лет</h3>
+						</div>
+					</div>
+				</div>
+			</setcion>
+			
+		</main>
+<footer class="footer container">
+	<div class="footer__column">
+		<div class="footer__top">
+			<div class="footer__top-subtitle">
+				<p>не думай</p>
+			</div>
+				
+			<div class="footer__bottom">
+				<div class="footer__top-title">
+					<h2>ЗАПИШИСЬ</h2>
+				</div>
+				<img src="./img/svg/arrow-footer.svg" alt="#">
+			</div>
+		</div>
+	
+		<div class="footer__top-line"></div>
+	
+		<div class="footer__list-bottom">
+			<div class="footer__text">
+				<a href="">главная</a>
+			</div>
+	
+			<div class="footer__text">
+				<a href="">+7 (444) 987 54 67</a>
+			</div>
+	
+			<div class="footer__text">
+				<a href="">stomexpert@gmail.com</a>
+			</div>
+		
+			<div class="footer__text">
+				<a href="">stomexpert.ru</a>
+			</div>
+	
+			<div class="footer__text">
+				<a href="">команда</a>
+			</div>
+	
+			<div class="footer__text">
+				<a href="">рассрочка</a>
+			</div>
+		</div>
+	
+		<div class="footer__list-bottom-mobile">
+			<div class="footer__list-bottom-first-row">
+				<div class="footer__text">
+					<a href="">главная</a>
+				</div>
+	
+				<div class="footer__text">
+					<a href="">+7 (444) 987 54 67</a>
+				</div>
+	
+				<div class="footer__text">
+					<a href="">stomexpert@gmail.com</a>
 				</div>
 			</div>
-		</header>
-		
-		<main class="main">
-			<section class="enum">
-				<div class="enum__column">
-
-					<div class="enum__first-row">
-
-						<div class="enum__first-row-left">
-							<div class="enum__title">
-								<h2>НАШ АДРЕС:</h2>
-							</div>
-	
-							<div class="enum__subtitle">
-								<p>г. Хабаровск улица <br> ленинградская 42 к 13</p>
-							</div>
-
-							<div class="enum__vertical-line"></div>
-						</div>
-
-						<div class="enum__first-row-right enum__margin-left">
-							<div class="enum__title">
-								<h2>ЗАПИСЬ</h2>
-							</div>
-	
-							<div class="enum__subtitle">
-								<p>Запишитесь на прием
-									к любому из наших специалистов 
-									со скидкой 5 % 
-									на первое посещение</p>
-							</div>
-	
-							<a class="enum__button" href="#">
-								<p>Записаться</p>
-							</a>
-						</div>
-
-						<div class="enum__horizontal-line"></div>
-
-					</div>
-
-					<div class="enum__second-row">
-						<div class="enum__second-row-left">
-							<div class="enum__title">
-								<h2>РАССРОЧКА</h2>
-							</div>
-	
-							<div class="enum__subtitle">
-								<p>Можно оформить онлайн
-									сейчас, и выбрать день посещения клиники</p>
-							</div>
-	
-							<a class="enum__button" href="#">
-								<p>Оформить</p>
-							</a>
-						</div>
-
-						<div class="enum__second-row-right enum__margin-left">
-							<div class="enum__title">
-								<h2>INSTAGRAM</h2>
-							</div>
-	
-							<div class="enum__subtitle">
-								<p>Рассказываем обо всех
-									акциях и дает советы
-									по гигиене</p>
-							</div>
-	
-							<a class="enum__button" href="#">
-								<p>Перейти</p>
-							</a>
-						</div>
-
-						<div class="enum__horizontal-line"></div>
-
-					</div>
-
-					<div class="enum__third-row">
-						<div class="enum__third-row-left">
-							<div class="enum__title">
-								<h2>TELEGRAM</h2>
-							</div>
-	
-							<div class="enum__subtitle">
-								<p>Стоматология в Telegram</p>
-							</div>
-	
-							<a class="enum__button" href="#">
-								<p>Перейти</p>
-							</a>
-						</div>
-
-						<div class="enum__third-row-right enum__margin-left">
-							<div class="enum__title">
-								<h2>ОТЗЫВЫ</h2>
-							</div>
-	
-							<div class="enum__subtitle">
-								<p>Наши посетители 
-									рекомендуют нас</p>
-							</div>
-	
-							<a class="enum__button" href="#">
-								<p>Ознакомиться</p>
-							</a>
-						</div>
-
-						<div class="enum__horizontal-line"></div>
-
-					</div>
-
+			
+			<div class="footer__list-bottom-second-row">
+				<div class="footer__text">
+					<a href="">stomexpert.ru</a>
 				</div>
-			</section>
-
-			<section class="location">
-				<div id="map" class="map"></div>
-				<a class="location__button" href="https://yandex.ru/maps/org/stomekspert/1024933200/?ll=135.098534%2C48.460457&mode=search&sll=135.098534%2C48.460457&sspn=0.082054%2C0.035336&text=%D0%A1%D1%82%D0%BE%D0%BC%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82&z=14">
-					<p>Перейти</p>
-				</a>
-			</section>
-
-			<footer class="footer">
-				<div class="footer__column">
-					<div class="footer__top">
-						<div class="footer__top-subtitle">
-							<p>не думай</p>
-						</div>
-							
-						<div class="footer__bottom">
-							<div class="footer__top-title">
-								<h2>ЗАПИШИСЬ</h2>
-							</div>
-							<img src="./img/svg/arrow-footer.svg" alt="#">
-						</div>
-					</div>
-
-					<div class="footer__top-line"></div>
-
-					<div class="footer__list-bottom">
-						<div class="footer__text">
-							<a href="">главная</a>
-						</div>
-
-						<div class="footer__text">
-							<a href="">+7 (444) 987 54 67</a>
-						</div>
-
-						<div class="footer__text">
-							<a href="">stomexpert@gmail.com</a>
-						</div>
-					
-						<div class="footer__text">
-							<a href="">stomexpert.ru</a>
-						</div>
-
-						<div class="footer__text">
-							<a href="">команда</a>
-						</div>
-
-						<div class="footer__text">
-							<a href="">рассрочка</a>
-						</div>
-					</div>
-
-					<div class="footer__list-bottom-mobile">
-						<div class="footer__list-bottom-first-row">
-							<div class="footer__text">
-								<a href="">главная</a>
-							</div>
 	
-							<div class="footer__text">
-								<a href="">+7 (444) 987 54 67</a>
-							</div>
-	
-							<div class="footer__text">
-								<a href="">stomexpert@gmail.com</a>
-							</div>
-						</div>
-						
-						<div class="footer__list-bottom-second-row">
-							<div class="footer__text">
-								<a href="">stomexpert.ru</a>
-							</div>
-	
-							<div class="footer__text">
-								<a href="">команда</a>
-							</div>
-	
-							<div class="footer__text">
-								<a href="">рассрочка</a>
-							</div>
-						</div>
-						
-					</div>
-
+				<div class="footer__text">
+					<a href="">команда</a>
 				</div>
-			</footer>
-		</main>
+	
+				<div class="footer__text">
+					<a href="">рассрочка</a>
+				</div>
+			</div>
+		</div>
 	</div>
-    <script src="./js/script.js"></script>
+</footer>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
 </body>
 </html>

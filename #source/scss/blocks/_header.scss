@@ -1,0 +1,81 @@
+.header {
+    z-index: 10;
+    
+    background: #ffffff;
+    padding-top: 34px;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.header__inner {
+    margin-bottom: 66px;
+    a {
+        color: #000000;
+    }
+    @media (max-width: 1920px) {
+        @include adaptive-value(margin-bottom ,66 ,48 , 1920 , 320 );
+    }
+    @media (max-width: 800px) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.header__logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 65px;
+    @media (max-width: 800px) {
+        width: 82px;
+        height: 34px;
+        margin-bottom: 0px;
+        @include adaptive-value(width  , 82 , 55 , 800 , 320 );
+        @include adaptive-value( height , 34 , 23 , 800 , 320 );
+    }
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+.header__menu-list {
+    display: flex;
+    justify-content: space-between;
+    
+    //Список при открытом бургере
+    @media (max-width: 800px) {
+        display: none;
+        padding: 0px 0px 0px 0px;
+        gap: 25px;
+    }
+}
+
+.header__menu-link {
+    color: #000000;
+    font-size: 34px;
+    letter-spacing: -1.71px;
+    @media (max-width: 1920px) {
+        @include adaptive-value(font-size , 34, 14, 1920 , 320 );
+    }
+    
+}
+
+.header__menu-icon {
+    display: none;
+    font-size: 19px;
+    color: #CFB28F;
+}
+
+@media (max-width: 800px) {
+    
+}
+
+.button__burger-menu {
+    display: none;
+    @media (max-width: 800px) {
+        display: flex;
+    }
+}

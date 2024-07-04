@@ -1,0 +1,438 @@
+.documents-content {
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+    font-family: 'Roboto Condensed';
+    color: #727272;
+    margin-bottom: 130px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( gap, 130,22 , 1920 , 320 );
+    }
+
+    .button-text {
+        font-size: 45px;
+        font-family: 'Roboto';
+        letter-spacing: -2.61px;
+        //Start (устанавливает градиентный цвет текста у кнопки)
+        background: linear-gradient(270deg, #f857a6 0%, #923362 100%);
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        //End
+        @media (max-width: 1920px) {
+            @include adaptive-value( font-size , 45 , 12 , 1920 , 320 );
+            @include adaptive-value( letter-spacing , -2.61 , -0.57, 1920 , 320 );
+        }
+    }
+
+    button {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 462px;
+        height: 103px;
+        //Start (устанавливает градиент окантовки кнопки)
+        background: linear-gradient(white, white) padding-box, 
+                    linear-gradient(90deg, #f857a6, #923362) border-box;
+        border-width: 2px;
+        border-style: solid;
+        border-color: transparent;
+        //end
+        border-radius: 51.5px;
+        margin-top: 180px;
+        margin-bottom: 175px;
+
+        @media (max-width: 1920px) {
+            @include adaptive-value(width , 462 , 100 , 1920 , 320 );
+            @include adaptive-value(height ,103  , 22 , 1920 , 320 );
+            @include adaptive-value(border-radius  , 51.5 , 11 , 1920 , 320 );
+            @include adaptive-value( border-width , 2 , 0.5 , 1920 , 320 );
+            @include adaptive-value( margin-top , 180 , 30 , 1920 , 320 );
+            @include adaptive-value( margin-bottom , 175 , 38 , 1920 , 320 );
+            
+        }
+    }
+
+    h2 {
+        font-size: 65px;
+        margin-bottom: 104px;
+        text-align: center;
+        letter-spacing: -2.05px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( font-size , 65 , 30 , 1920 , 701 );
+            @include adaptive-value( margin-bottom , 104 , 22 , 1920 , 320 );
+        }
+        @media (max-width: 700px) {
+            @include adaptive-value(font-size ,30 , 28, 700 , 481 );
+            letter-spacing: -0.75px;
+        }
+        @media (max-width: 480px) {
+            @include adaptive-value( font-size , 28 , 19 , 480 , 320 );
+            letter-spacing: -0.66px;
+        }
+        @media (max-width: 320px) {
+            letter-spacing: -0.44px;
+        }
+    }
+    
+    h3 {
+        font-size: 45px;
+        font-family: 'Roboto Condensed';
+        letter-spacing: -2.05px;
+        padding-right: 10px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( font-size , 45 , 13 , 1920 , 320 );
+        }
+        @media (max-width: 700px) {
+            letter-spacing: -0.75px;
+        }
+        @media (max-width: 480px) {
+            letter-spacing: -0.66px;
+        }
+        @media (max-width: 320px) {
+            letter-spacing: -0.44px;
+        }
+    }
+}
+
+//Section normativ start
+.normativ {
+    display: flex;
+    flex-direction: column;
+}
+
+.normativ__body {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .normativ__card:nth-child(1), 
+    .normativ__card:nth-child(2) {
+        padding-top: 340px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( padding-top , 340 , 64 , 1920 , 320 );
+        }
+    }
+    .normativ__card:nth-child(3), 
+    .normativ__card:nth-child(4) {
+        padding-top: 375px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( padding-top , 375 , 78 , 1920 , 320 );
+        }
+
+    }
+    .normativ__card:nth-child(5), 
+    .normativ__card:nth-child(6),
+    .normativ__card:nth-child(7), 
+    .normativ__card:nth-child(8) {
+        padding-top: 176px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( padding-top , 176 , 37 , 1920 , 320 );
+        }
+    }
+    
+    .normativ__card:nth-child(2),
+    .normativ__card:nth-child(4),
+    .normativ__card:nth-child(6),
+    .normativ__card:nth-child(8) {
+        padding-left: 41px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( padding-left , 41 , 9 , 1920 , 320 );
+        }
+    }
+}
+.normativ__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.normativ__horizontal-line-1 {
+    grid-row: 2;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    transform: translateY(-50%);
+    background: linear-gradient(164deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(253, 88, 119, 0.65) 55%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
+    @media (max-width: 1920px) {
+        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+    }
+}
+
+.normativ__horizontal-line-2 {
+    grid-row: 3;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    transform: translateY(-50%);
+    background: linear-gradient(164deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(253, 88, 119, 0.65) 55%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
+    @media (max-width: 1920px) {
+        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+    }
+}
+
+.normativ__horizontal-line-3 {
+    grid-row: 4;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    transform: translateY(-50%);
+    background: linear-gradient(164deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(253, 88, 119, 0.65) 55%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
+    @media (max-width: 1920px) {
+        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+    }
+}
+
+.normativ__vertical-line {
+    position: absolute;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 100%;
+    grid-column: 2; /* Указываем номер колонки */
+    background: linear-gradient(74deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(253, 88, 119, 0.65) 55%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
+    @media (max-width: 1920px) {
+        @include adaptive-value(width , 10 , 2.16, 1920 , 320 );
+    }
+}
+//Section normativ end
+
+//Section reglament start
+.reglament {
+    display: flex;
+    flex-direction: column;
+}
+
+.reglament__body {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .reglament__card:nth-child(1), 
+    .reglament__card:nth-child(2) {
+        padding-top: 340px;
+        @media (max-width: 1920px) {
+            @include adaptive-value(padding-top ,340 , 72, 1920 , 320 );
+        }
+    }
+    .reglament__card:nth-child(3), 
+    .reglament__card:nth-child(4) {
+        height: 250px;
+        @media (max-width: 1920px) {
+            @include adaptive-value(height ,250 ,54 , 1920 , 320 );
+        }
+    }
+
+    .reglament__card:nth-child(2) {
+        padding-left: 41px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( padding-left , 41 , 9 , 1920 , 320 );
+        }
+    }
+}
+.reglament__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reglament__horizontal-line-1 {
+    grid-row: 2;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    transform: translateY(-50%);
+    background: linear-gradient(to bottom right, 
+    rgba(249, 88, 161, 1) 0%,
+    rgba(251, 88, 141, 0.98) 10%,
+    rgba(251, 88, 135, 0.91) 23%,
+    rgba(252, 88, 133, 0.8) 39%,
+    rgba(253, 88, 119, 0.65) 55%,
+    rgba(253, 88, 118, 0.48) 73%,
+    rgba(255, 88, 101, 0.23) 91%,
+    rgba(255, 89, 91, 0.21) 100%);
+    @media (max-width: 1920px) {
+        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+    }
+}
+
+.reglament__vertical-line {
+    position: absolute;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 100%;
+    grid-column: 2; /* Указываем номер колонки */
+    
+    background: linear-gradient(157deg, 
+    #F958A1 0%, 
+    rgba(251, 88, 141, 0.98) 10%,
+     rgba(251, 88, 135, 0.91) 23%, 
+     rgba(252, 88, 133, 0.80) 39%, 
+     rgba(253, 88, 119, 0.65) 55%,
+    rgba(253, 88, 118, 0.48) 73%, 
+    rgba(255, 88, 101, 0.23) 91%, 
+    rgba(255, 89, 91, 0.21) 100%);
+    @media (max-width: 1920px) {
+        @include adaptive-value(width , 10 , 2.16, 1920 , 320 );
+    }
+}
+//Section reglament end
+
+//Section standarts start
+.standarts {
+    display: flex;
+    flex-direction: column;
+}
+
+.standarts__body {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .standarts__card:nth-child(1), 
+    .standarts__card:nth-child(2) {
+        padding-top: 340px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( padding-top , 340 , 64 , 1920 , 320 );
+        }
+    }
+    .standarts__card:nth-child(3), 
+    .standarts__card:nth-child(4) {
+        padding-top: 375px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( padding-top , 375 , 78 , 1920 , 320 );
+        }
+    }
+    .standarts__card:nth-child(5), 
+    .standarts__card:nth-child(6),
+    .standarts__card:nth-child(7),
+    .standarts__card:nth-child(8),
+    .standarts__card:nth-child(9)
+     {
+        padding-top: 176px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( padding-top , 176 , 37 , 1920 , 320 );
+        }
+    }
+    
+    .standarts__card:nth-child(2),
+    .standarts__card:nth-child(4),
+    .standarts__card:nth-child(6),
+    .standarts__card:nth-child(8) {
+        padding-left: 41px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( padding-left , 41 , 9 , 1920 , 320 );
+        }
+    }
+}
+.standarts__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.standarts__horizontal-line-1 {
+    grid-row: 2;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    transform: translateY(-50%);
+    background: linear-gradient(to bottom right, 
+    rgba(249, 88, 161, 1) 0%,
+    rgba(251, 88, 141, 0.98) 10%,
+    rgba(251, 88, 135, 0.91) 23%,
+    rgba(252, 88, 133, 0.8) 39%,
+    rgba(253, 88, 119, 0.65) 55%,
+    rgba(253, 88, 118, 0.48) 73%,
+    rgba(255, 88, 101, 0.23) 91%,
+    rgba(255, 89, 91, 0.21) 100%);
+    @media (max-width: 1920px) {
+        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+    }
+}
+
+.standarts__horizontal-line-2 {
+    grid-row: 3;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    transform: translateY(-50%);
+    background: linear-gradient(to bottom right, 
+    rgba(249, 88, 161, 1) 0%,
+    rgba(251, 88, 141, 0.98) 10%,
+    rgba(251, 88, 135, 0.91) 23%,
+    rgba(252, 88, 133, 0.8) 39%,
+    rgba(253, 88, 119, 0.65) 55%,
+    rgba(253, 88, 118, 0.48) 73%,
+    rgba(255, 88, 101, 0.23) 91%,
+    rgba(255, 89, 91, 0.21) 100%);
+    @media (max-width: 1920px) {
+        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+    }
+}
+
+.standarts__horizontal-line-3 {
+    grid-row: 4;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    transform: translateY(-50%);
+    background: linear-gradient(to bottom right, 
+    rgba(249, 88, 161, 1) 0%,
+    rgba(251, 88, 141, 0.98) 10%,
+    rgba(251, 88, 135, 0.91) 23%,
+    rgba(252, 88, 133, 0.8) 39%,
+    rgba(253, 88, 119, 0.65) 55%,
+    rgba(253, 88, 118, 0.48) 73%,
+    rgba(255, 88, 101, 0.23) 91%,
+    rgba(255, 89, 91, 0.21) 100%);
+    @media (max-width: 1920px) {
+        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+    }
+}
+
+.standarts__horizontal-line-4 {
+    grid-row: 5;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    transform: translateY(-50%);
+    background: linear-gradient(to bottom right, 
+    rgba(249, 88, 161, 1) 0%,
+    rgba(251, 88, 141, 0.98) 10%,
+    rgba(251, 88, 135, 0.91) 23%,
+    rgba(252, 88, 133, 0.8) 39%,
+    rgba(253, 88, 119, 0.65) 55%,
+    rgba(253, 88, 118, 0.48) 73%,
+    rgba(255, 88, 101, 0.23) 91%,
+    rgba(255, 89, 91, 0.21) 100%);
+    @media (max-width: 1920px) {
+        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+    }
+}
+
+.standarts__vertical-line {
+    position: absolute;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 100%;
+    grid-column: 2; /* Указываем номер колонки */
+    
+    background: linear-gradient(157deg, 
+    #F958A1 0%, 
+    rgba(251, 88, 141, 0.98) 10%,
+     rgba(251, 88, 135, 0.91) 23%, 
+     rgba(252, 88, 133, 0.80) 39%, 
+     rgba(253, 88, 119, 0.65) 55%,
+    rgba(253, 88, 118, 0.48) 73%, 
+    rgba(255, 88, 101, 0.23) 91%, 
+    rgba(255, 89, 91, 0.21) 100%);
+    @media (max-width: 1920px) {
+        @include adaptive-value(width , 10 , 2.16, 1920 , 320 );
+    }
+}
+//Section standart end

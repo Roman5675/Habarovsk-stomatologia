@@ -1,0 +1,109 @@
+//Section welcome start
+.welcome {
+}
+.visually-hidden {
+}
+.welcome__body {
+    display: flex;
+    justify-content: space-between;
+}
+.welcome__left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.welcome__text {
+    max-width: 680px;
+    @include fluid-text(49 ,12 );
+}
+.welcome__link {
+    font-size: 46px;
+}
+.welcome__image {
+}
+//Section welcome end
+
+//Section doctors start
+.doctors {
+    margin-bottom: 130px;
+}
+.visually-hidden {
+}
+.doctors__body {
+}
+.doctors__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 126px;
+    row-gap: 218px;
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.doctors__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.doctors__card-info {
+    border-radius: 50px;
+    position: relative; /* необходим для корректной работы box-shadow */
+    box-shadow: 0 0 20px rgba(235, 69, 146, 0.5);
+    margin-bottom: 75px;
+    
+}
+
+.doctors__images {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.doctors__images-logo {
+    max-height: 258px;
+}
+.doctors__images-face {
+    max-width: 391px;
+}
+.doctors__title {
+    font-size: 47px;
+    margin-bottom: 80px;
+    padding-left: 24px;
+}
+.doctors__subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    padding-left: 31px;
+    padding-bottom: 65px;
+}
+.doctors__subtitle-first-row {
+    font-size: 32px;
+}
+.doctors__subtitle-first-row-number {
+    font-size: 55px;
+}
+.doctors__subtitle-second-row {
+    font-size: 32px;
+}
+.doctors__subtitle-second-row-number {
+    font-size: 55px;
+}
+.doctors__subtitle-third-row {
+    font-size: 32px;
+}
+
+.doctors__card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(126deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(252, 88, 134, 0.83) 42.57%, rgba(253, 88, 119, 0.65) 59.9%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
+    border-radius: 0px 0px 25px 25px;
+    height: 129px;
+}
+.doctors__card-button-text {
+    font-size: 40px;
+}
+
+//Section doctors end

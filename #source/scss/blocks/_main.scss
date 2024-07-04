@@ -1,0 +1,214 @@
+//секция signup start
+.signup__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup__title {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 5.35%;
+    max-width: 1188px;
+    h2 {
+        font-size: 40px;
+    }
+}
+.signupsubtitle {
+    
+    text-align: center;
+    max-width: 800px;
+    p{
+        margin-bottom: 5%;
+        font-size: clamp(10px, 8vw, 22px);
+    }
+}
+
+.signup__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    letter-spacing: -2.61px;
+    width: 462px;
+    height: 103px;
+    border-radius: 51.5px;
+    border-width: 1.5px;
+    border-color: #F857A6;
+    border-style: solid;
+    p {
+        color: #F857A6;
+        margin-bottom: 0px;
+    }
+    @media (max-width: 1920px) {
+        @include adaptive-value(width , 462 , 100 , 1920 , 320 );
+        @include adaptive-value(height ,103  , 22 , 1920 , 320 );
+        @include adaptive-value(border-radius  , 51.5 , 11 , 1920 , 320 );
+        @include adaptive-value( font-size , 30 , 12 , 1920 , 320 );
+        @include adaptive-value( letter-spacing , -2.61 , -0.57, 1920 , 320 );
+    }
+}
+//секция signup end
+
+//Slider start
+.swiper-slide {
+    transition: transform 0.3s;
+}
+
+.price-slider__slide.swiper-slide-active {
+}
+
+.price-slider__slide.swiper-slide-next, .price-slider__slide.swiper-slide-prev {
+    
+}
+
+.price-slider__slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev) {
+    
+}
+
+.swiper {
+    
+}
+
+.swiper-wrapper {
+    
+}
+
+
+//Slider end
+
+//Advantage start
+.advantage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.advantage__header {
+}
+.advantage__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 54px;
+    row-gap: 100px;
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.advantage__item {
+    
+    
+}
+.advantage__image {
+}
+.advantage__title {
+}
+.advantage__subtitle {
+}
+.advantage__button {
+}
+//Advantage end
+
+//Installment start
+.installment {
+}
+.installment__row {
+    display: flex;
+    height: 740px;
+    background-color: #F958A1;
+}
+.installment__left-row {
+}
+.installment__button {
+}
+.installment__right-row {
+}
+
+//Installment end
+
+//Services start
+.services {
+}
+.services__header {
+}
+.services__cards {
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 68px;
+    row-gap: 68px;
+}
+.services__card {
+    height: 435px;
+}
+.services__image {
+}
+.services__title {
+}
+.services__button {
+}
+//Services end
+
+//Meet start
+.meet {
+}
+.meet__header {
+}
+.meet__row {
+    display: flex;
+    
+    
+}
+.meet__image {
+    max-height: 912px;
+}
+.meet__row-right {
+}
+.meet__text {
+}
+.meet__button {
+}
+//Meet end
+
+//Welcome start
+.welcome {
+}
+.welcome__column {
+    display: flex;
+    flex-direction: column;
+}
+.welcome__first-row {
+    display: flex;
+}
+.welcome__first-row-text-left {
+}
+.welcome__first-row-text-right {
+}
+.welcome__second-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 38px;
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 23px;
+        .wide {
+            grid-column: -1 / 1;
+           }
+    }
+}
+
+
+.welcome__card {
+    
+}
+.welcome__text {
+    @media (max-width: 480px) {
+        text-align: center; 
+    }
+}
+.welcome__title {
+    @media (max-width: 480px) {
+        text-align: center; 
+    }
+}
+//Welcome end
