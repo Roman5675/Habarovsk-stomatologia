@@ -102,6 +102,8 @@
 .normativ {
     display: flex;
     flex-direction: column;
+    margin-top: 66px;
+    @include adaptiveValue( margin-top , 66 , 48 );
 }
 
 .normativ__body {

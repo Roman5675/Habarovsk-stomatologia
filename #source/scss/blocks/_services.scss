@@ -2,7 +2,10 @@
 .services-intro {
     display: flex;
     flex-direction: column;
+    margin-top: 66px;
     margin-bottom: 65px;
+    @include adaptiveValue( margin-top , 66 , 48 );
+    @include adaptiveValue( margin-bottom,  65 , 28  );
 }
 
 .services-intro__text {
@@ -11,7 +14,8 @@
     justify-content: space-between;
     gap: 90px;
     margin-bottom: 146px;
-    padding-right: 115px;
+    @include adaptiveValue( gap , 90 , 28 );
+    @include adaptiveValue( margin-bottom , 146 , 18 );
 }
 .services-intro__text-title {
     font-size: 87px;
@@ -31,13 +35,20 @@
     @media (max-width: 1920px) {
         @include adaptive-value(font-size ,46 ,12 , 1920 , 320 );
     }
+    @media (max-width: 700px) {
+        letter-spacing: -0.75px;
+    }
 
 }
 .services-intro__images {
     display: flex;
     justify-content: space-between;
+    gap: 277px;
     padding-right: 115px;
     margin-bottom: 130px;
+    @include adaptiveValue( padding-right , 115 , 28 );
+    @include adaptiveValue( margin-bottom , 130 , 28 );
+    @include adaptiveValue( gap , 277 , 60 );
 }
 .services-intro__images-left {
     padding-top: 61px;
@@ -55,6 +66,9 @@
     border-style: solid;
     border-color: transparent;
     border-radius: 51.5px;
+    @include adaptiveValue(height  , 103 , 22 );
+    @include adaptiveValue( border-radius , 51.5 , 11 );
+    @include adaptiveValue( border-width , 2 , 0.5 );
 }
 .services-intro__link-text {
     font-size: 37px;
@@ -63,6 +77,7 @@
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @include adaptiveValue( font-size , 37 , 12 );
 }
 //Section services-intro end
 

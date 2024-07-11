@@ -6,7 +6,9 @@
     @media (max-width: 699px) {
         flex-direction: row;
         align-items: center;
+        margin-top: 17px;
     }
+    
     
 }
 
@@ -20,22 +22,31 @@
 }
 
 .header__logo {
-    display: flex;
-    justify-content: center;
+    margin: 0px auto;
+    width: 262px;
     margin-top: 34px;
     margin-bottom: 44px;
     @include adaptiveValue( margin-top , 34 , 12 , 1920 , 700 , 1 );
     @include adaptiveValue( margin-bottom , 44 , 24 , 1920 , 700 , 1 );
+    @include adaptiveValue( width , 262 , 55 );
     @media (max-width: 699px) {
         margin-bottom: 0px;
+        margin: 0px;
     }
 }
 
 .header__logo-mobile {
     display: none;
+    width: 294px;
+    margin: 0px auto;
+    @include adaptiveValue( width , 294 , 198 , 480 , 320 , 1 );
     @media (max-width: 699px) {
         display: flex;
         justify-content: center;
+        margin-top: 28px;
+        margin-bottom: 70px;
+        @include adaptiveValue( margin-top , 28 , 19 , 480 , 320 , 1 );
+        @include adaptiveValue( margin-bottom , 70 , 26 , 480 , 320 , 1 );
     }
 }
 
@@ -55,7 +66,14 @@ body._lock {
         flex-direction: column;
         align-items: center;
         gap: 25px;
+        font-weight: 500;
+        margin-bottom: 70px;
+        @include adaptiveValue( margin-bottom , 70 , 26 , 480 , 320 , 1 );
     }
+}
+
+.menu__list li:hover {
+    background: #bfe8f5;
 }
 
 .menu__link {
@@ -69,6 +87,11 @@ body._lock {
 
 .menu__icon {
     display: none;
+    color: #cfb28f;
+    font-family: 'Roboto Condensed';
+    font-size: 24px;
+    font-weight: 700;
+    @include adaptiveValue( font-size , 24 , 19 , 699 , 320 , 1 );
 }
 
 @media (max-width: 699px) {
@@ -95,7 +118,7 @@ body._lock {
         top: 0;
         left: -100%;
         width: 100%;
-        
+        z-index: 99;
         background: #bfe8f5;
         transition: left 0.3s ease 0s;
 
@@ -107,10 +130,7 @@ body._lock {
     .menu__body._active {
         left: 0;
         .menu__link {
-            padding-top: 0px;
-            padding-right: 0px;
-            padding-bottom: 0px;
-            padding-left: 0px;
+            
             &:hover {
                background: none;
                color: #D8EFE3;
@@ -121,3 +141,36 @@ body._lock {
     //
 }
 //Меню бургер end
+.menu__button-mobile {
+    display: none;
+    @media (max-width: 699px) {
+        display: block;
+    }
+    margin: 0px auto;
+    background-color: #ffffff;
+    border-radius: 21px;
+    margin-bottom: 29px;
+    p {
+        background: linear-gradient(270deg, #f857a6 0%, #923362 100%);
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    @include adaptive-value(border-radius  , 21 , 14 , 480 , 320 );
+    @include adaptiveValue( margin-bottom , 29 , 19 , 480 , 320 , 1);
+}
+.menu__button-mobile-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    letter-spacing: -1.71px;
+    width: 152px;
+    height: 43px;
+    @include adaptive-value( font-size , 17 , 12 , 480 , 320 );
+    @include adaptive-value( letter-spacing , -2.61 , -0.73, 1920 , 320 );
+    @include adaptiveValue( width , 152 , 102 , 480 , 320 , 1 );
+    @include adaptiveValue( height , 43 , 29 , 480 , 320 , 1  );
+}
+

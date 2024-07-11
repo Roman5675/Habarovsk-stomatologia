@@ -1,4 +1,8 @@
 //Section enum start
+.enum {
+    margin-top: 66px;
+    @include adaptiveValue( margin-top , 66 , 48 );
+}
 .enum__vertical-line {
     position: absolute;
     height: 10px;

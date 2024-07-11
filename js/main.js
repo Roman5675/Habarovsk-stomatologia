@@ -1,4 +1,16 @@
 
+//Меню бургер
+document.addEventListener('DOMContentLoaded', function () {
+    const iconMenu = document.querySelector('.menu__icon');
+    const menuBody = document.querySelector('.menu__body');
+    if (iconMenu) {
+        iconMenu.addEventListener("click", function (e) {
+            document.body.classList.toggle('_lock');
+            iconMenu.classList.toggle('_active');
+            menuBody.classList.toggle('_active');
+        });
+    }
+});
 async function initMap() {
     // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
     await ymaps3.ready;
@@ -55,13 +67,3 @@ new Swiper('.price-slider', {
         clickable: true, // Сделать точки кликабельными
     },
 });
-//Меню бургер
-const iconMenu = document.querySelector('.menu__icon');
-const menuBody = document.querySelector('.menu__body');
-if (iconMenu) {
-    iconMenu.addEventListener("click", function (e) {
-        document.body.classList.toggle('_lock');
-        iconMenu.classList.toggle('_active');
-        menuBody.classList.toggle('_active');
-    });
-}
