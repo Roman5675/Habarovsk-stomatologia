@@ -14,6 +14,7 @@
 
 .container {
     max-width: 1920px;
+    width: 100%;
     margin-inline: auto; //Центрирование контейнера
     padding-inline: 261px;
     @media (max-width: 1920px) {

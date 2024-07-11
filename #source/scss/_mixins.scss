@@ -4,6 +4,103 @@
     #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$addWidth}));
 }
 
+//Percent
+@function percent($px, $from) {
+	$result: math.div($px, $from) * 100%;
+	@return $result;
+}
+//REM
+@function rem($px) {
+	$result: math.div($px, 16) + rem;
+	@return $result;
+}
+//EM
+@function em($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+//Адаптивное свойство
+
+//Currency
+@mixin currency($sym) {
+	&::after {
+		content: "#{$sym}";
+	}
+}
+
+// Grids
+@mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
+	display: grid;
+	gap: $gap;
+	grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+}
+
+// НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1920;
+
+//Значения keepSize: 
+// 0 - Режим по умолчанию, который не включает в себя фиксацию значений за пределами указанных ширин. В этом режиме свойство будет адаптироваться в зависимости от ширины окна, а при ширинах, выходящих за указанные пределы, значения будут наследоваться от предков.
+// 1 — Если ширина экрана больше чем ширина от, то значение свойства будет равно начальному значению. Если ширина экрана меньше чем ширина до, то значение свойства будет равно конечному значению.
+// 2 — Если ширина экрана больше чем ширина от, то значение свойства будет равно начальному значению. Если ширина экрана меньше чем ширина до, то значение свойства будет по умолчанию либо наследоваться от предков.
+// 3 — Если ширина экрана больше чем ширина от, то значение свойства будет по умолчанию либо наследоваться от предков. Если ширина экрана меньше чем ширина до, то значение свойства будет равно конечному значению.
+
+// Адаптивное свойство (clamp)
+@mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $maxWidth, $widthTo: $minWidth, $keepSize: 0) {
+	@if ($startSize==0) {
+		$startSize: 0.000001;
+	}
+	@if ($minSize==0) {
+		$minSize: 0.000001;
+	}
+
+	// Для calc();
+    $addSize: ($startSize - $minSize) / 16;
+
+	// Брейк-поинты в EM
+	$widthFromMedia: em($widthFrom);
+	$widthToMedia: em($widthTo);
+
+	// Формула плавающего значения
+	// Источник: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+	$slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
+	$yIntersection: -$widthTo * $slope + $minSize;
+	@if ($yIntersection==0) {
+		$yIntersection: 0.000001;
+	}
+	$flyValue: #{rem($yIntersection)}" + " #{$slope * 100}vw;
+
+	// Получение значения свойства
+	$propertyValue: #{"clamp(" rem($minSize) "," $flyValue "," rem($startSize) ")"};
+	// Если отрицательные значения
+	@if ($minSize > $startSize) {
+		$propertyValue: #{"clamp(" rem($startSize) "," $flyValue "," rem($minSize) ")"};
+	}
+
+	// Если поддерживается clamp();
+	@supports (#{$property}: $propertyValue) {
+		#{$property}: $propertyValue;
+	}
+	// Если не поддерживается clamp();
+	@supports not (#{$property}: $propertyValue) {
+		#{$property}: calc(#{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) - math.div($widthTo, 16)});
+	}
+
+	// Устанавливаем значения по умолчанию
+	@if $widthFrom != $maxWidth and $keepSize != 1 and $keepSize != 2 {
+		@media (min-width: $widthFromMedia) {
+			#{$property}: inherit;
+		}
+	}
+	@if $widthTo != $minWidth and $keepSize != 1 and $keepSize != 3 {
+		@media (max-width: $widthToMedia) {
+			#{$property}: inherit;
+		}
+	}
+}
+
 @mixin fluid-text($max:48, $min:16) {
     font-size: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
 }

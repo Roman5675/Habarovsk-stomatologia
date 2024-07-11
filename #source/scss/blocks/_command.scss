@@ -6,20 +6,67 @@
 .welcome__body {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 .welcome__left-column {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
-.welcome__text {
+.welcome__title {
+    font-size: 48px;
+    letter-spacing: -2.01px;
     max-width: 680px;
-    @include fluid-text(49 ,12 );
+    text-align: left;
+    @media (max-width: 1920px) {
+        @include adaptive-value(font-size ,48 ,12 , 1920 , 320 );
+    }
+    @media (max-width: 700px) {
+        letter-spacing: -0.74px;
+    }
+    
+    @media (max-width: 320px) {
+        letter-spacing: -0.45px;
+    }
 }
 .welcome__link {
     font-size: 46px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: -2.56px;
+    width: 358px;
+    height: 102px;
+    border-radius: 51px;
+    background: linear-gradient(white, white) padding-box, 
+                    linear-gradient(90deg, #f857a6, #923362) border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+    p {
+        background: linear-gradient(270deg, #f857a6 0%, #923362 100%);
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0px;
+    }
+    @media (max-width: 1920px) {
+        @include adaptive-value(width , 358 , 79 , 1920 , 320 );
+        @include adaptive-value(height ,103  , 23 , 1920 , 320 );
+        @include adaptive-value(border-radius  , 51 , 11 , 1920 , 320 );
+        @include adaptive-value( border-width , 2 , 0.5 , 1920 , 320 );
+        @include adaptive-value( font-size , 46 , 12 , 1920 , 320 );
+        @include adaptive-value( letter-spacing , -2.61 , -0.57, 1920 , 320 );
+    }
 }
 .welcome__image {
+    min-width: 158px;
 }
 //Section welcome end
 
@@ -27,16 +74,19 @@
 .doctors {
     margin-bottom: 130px;
 }
-.visually-hidden {
-}
+
 .doctors__body {
+
 }
 .doctors__cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 126px;
     row-gap: 218px;
-
+    @media (max-width: 1920px) {
+        @include adaptive-value(column-gap ,126 ,42 , 1920 , 481 );
+        @include adaptive-value( row-gap , 218 , 80 , 1920 , 481 );
+    }
     @media (max-width: 480px) {
         grid-template-columns: 1fr;
     }
@@ -67,9 +117,28 @@
     max-width: 391px;
 }
 .doctors__title {
+    font-family: 'Roboto Condensed';
     font-size: 47px;
+    letter-spacing: -1.55px;
     margin-bottom: 80px;
     padding-left: 24px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( font-size , 47 , 17 , 1920 , 701 );
+        @include adaptive-value( margin-bottom , 80 , 38 , 1920 , 320 );
+        @include adaptive-value( padding-left , 24 , 11 , 1920 , 320 );
+    }
+    @media (max-width: 700px) {
+        font-size: 17px;
+        letter-spacing: -0.57px;
+    }
+    @media (max-width: 480px) {
+        font-size: 35px;
+        letter-spacing: -1.11px;
+    }
+    @media (max-width: 320px) {
+        font-size: 23px;
+        letter-spacing: -0.75px;
+    }
 }
 .doctors__subtitle {
     display: flex;
@@ -77,21 +146,39 @@
     gap: 38px;
     padding-left: 31px;
     padding-bottom: 65px;
+    @media (max-width: 1920px) {
+        @include adaptive-value(padding-left ,31 ,11 , 1920 , 320 );
+        @media (max-width: 1920px) {
+        @include adaptive-value(padding-bottom ,65 , 42, 1920 , 320 );
+        }
+    }
 }
-.doctors__subtitle-first-row {
+
+.doctors__subtitle-font {
     font-size: 32px;
+    font-weight: 500;
+    letter-spacing: -2.09px;
+    @media (max-width: 1920px) {
+        @include adaptiveValue( font-size, 32 , 13);
+
+
+    }
+    @media (max-width: 700px) {
+        letter-spacing: -0.76px;
+    }
+    @media (max-width: 480px) {
+        letter-spacing: -1.49px;
+    }
+    @media (max-width: 320px) {
+        letter-spacing: -1.02px;
+    }
 }
-.doctors__subtitle-first-row-number {
+
+.doctors__subtitle-number {
     font-size: 55px;
-}
-.doctors__subtitle-second-row {
-    font-size: 32px;
-}
-.doctors__subtitle-second-row-number {
-    font-size: 55px;
-}
-.doctors__subtitle-third-row {
-    font-size: 32px;
+    @media (max-width: 1920px) {
+        @include adaptive-value(font-size ,55 ,27 , 1920 , 320 );
+    }
 }
 
 .doctors__card-button {
