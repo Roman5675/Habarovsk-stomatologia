@@ -3246,6 +3246,20 @@ body._lock {
   }
 }
 
+.welcome {
+  margin-top: 66px;
+}
+@supports (margin-top: clamp( 1.875rem , 1.425rem  +  2.25vw , 4.125rem )) {
+  .welcome {
+    margin-top: clamp( 1.875rem , 1.425rem  +  2.25vw , 4.125rem );
+  }
+}
+@supports not (margin-top: clamp( 1.875rem , 1.425rem  +  2.25vw , 4.125rem )) {
+  .welcome {
+    margin-top: calc(1.875rem + 2.25 * (100vw - 20rem) / 100);
+  }
+}
+
 .welcome__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3366,6 +3380,7 @@ body._lock {
   .doctors__cards {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    row-gap: calc(50px + 30 * (100vw - 320px) / 160);
   }
 }
 
@@ -3385,6 +3400,16 @@ body._lock {
   -webkit-box-shadow: 0 0 20px rgba(235, 69, 146, 0.5);
           box-shadow: 0 0 20px rgba(235, 69, 146, 0.5);
   margin-bottom: 75px;
+}
+@supports (margin-bottom: clamp( 2.1875rem , 1.6875rem  +  2.5vw , 4.6875rem )) {
+  .doctors__card-info {
+    margin-bottom: clamp( 2.1875rem , 1.6875rem  +  2.5vw , 4.6875rem );
+  }
+}
+@supports not (margin-bottom: clamp( 2.1875rem , 1.6875rem  +  2.5vw , 4.6875rem )) {
+  .doctors__card-info {
+    margin-bottom: calc(2.1875rem + 2.5 * (100vw - 20rem) / 100);
+  }
 }
 
 .doctors__images {
@@ -3514,12 +3539,53 @@ body._lock {
       -ms-flex-align: center;
           align-items: center;
   background: linear-gradient(126deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(252, 88, 134, 0.83) 42.57%, rgba(253, 88, 119, 0.65) 59.9%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
-  border-radius: 0px 0px 25px 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
   height: 129px;
+}
+@supports (height: clamp( 3.875rem , 3.0375rem  +  4.1875vw , 8.0625rem )) {
+  .doctors__card-button {
+    height: clamp( 3.875rem , 3.0375rem  +  4.1875vw , 8.0625rem );
+  }
+}
+@supports not (height: clamp( 3.875rem , 3.0375rem  +  4.1875vw , 8.0625rem )) {
+  .doctors__card-button {
+    height: calc(3.875rem + 4.1875 * (100vw - 20rem) / 100);
+  }
+}
+@supports (border-bottom-left-radius: clamp( 0.625rem , 0.4375rem  +  0.9375vw , 1.5625rem )) {
+  .doctors__card-button {
+    border-bottom-left-radius: clamp( 0.625rem , 0.4375rem  +  0.9375vw , 1.5625rem );
+  }
+}
+@supports not (border-bottom-left-radius: clamp( 0.625rem , 0.4375rem  +  0.9375vw , 1.5625rem )) {
+  .doctors__card-button {
+    border-bottom-left-radius: calc(0.625rem + 0.9375 * (100vw - 20rem) / 100);
+  }
+}
+@supports (border-bottom-right-radius: clamp( 0.625rem , 0.4375rem  +  0.9375vw , 1.5625rem )) {
+  .doctors__card-button {
+    border-bottom-right-radius: clamp( 0.625rem , 0.4375rem  +  0.9375vw , 1.5625rem );
+  }
+}
+@supports not (border-bottom-right-radius: clamp( 0.625rem , 0.4375rem  +  0.9375vw , 1.5625rem )) {
+  .doctors__card-button {
+    border-bottom-right-radius: calc(0.625rem + 0.9375 * (100vw - 20rem) / 100);
+  }
 }
 
 .doctors__card-button-text {
   font-size: 40px;
+}
+@supports (font-size: clamp( 1.25rem , 1rem  +  1.25vw , 2.5rem )) {
+  .doctors__card-button-text {
+    font-size: clamp( 1.25rem , 1rem  +  1.25vw , 2.5rem );
+  }
+}
+@supports not (font-size: clamp( 1.25rem , 1rem  +  1.25vw , 2.5rem )) {
+  .doctors__card-button-text {
+    font-size: calc(1.25rem + 1.25 * (100vw - 20rem) / 100);
+  }
 }
 
 .services-intro {

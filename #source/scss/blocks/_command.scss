@@ -1,8 +1,9 @@
 //Section welcome start
 .welcome {
+    margin-top: 66px;
+    @include adaptiveValue( margin-top , 66 , 30 );
 }
-.visually-hidden {
-}
+
 .welcome__body {
     display: flex;
     justify-content: space-between;
@@ -89,6 +90,7 @@
     }
     @media (max-width: 480px) {
         grid-template-columns: 1fr;
+        @include adaptive-value( row-gap , 80 , 50 , 480 , 320 );
     }
 }
 
@@ -102,7 +104,7 @@
     position: relative; /* необходим для корректной работы box-shadow */
     box-shadow: 0 0 20px rgba(235, 69, 146, 0.5);
     margin-bottom: 75px;
-    
+    @include adaptiveValue( margin-bottom , 75 , 35 );
 }
 
 .doctors__images {
@@ -186,11 +188,16 @@
     justify-content: center;
     align-items: center;
     background: linear-gradient(126deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(252, 88, 134, 0.83) 42.57%, rgba(253, 88, 119, 0.65) 59.9%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
-    border-radius: 0px 0px 25px 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     height: 129px;
+    @include adaptiveValue( height , 129 , 62 );
+    @include adaptiveValue( border-bottom-left-radius , 25 , 10 );
+    @include adaptiveValue( border-bottom-right-radius , 25 , 10 );
 }
 .doctors__card-button-text {
     font-size: 40px;
+    @include adaptiveValue( font-size , 40 , 20 );
 }
 
 //Section doctors end
