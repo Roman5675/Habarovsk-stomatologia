@@ -40,11 +40,13 @@ async function initMap() {
 
 initMap();
 
-const swiper = new Swiper('.price-slider', {
+//Слайдер swiper
+new Swiper('.price-slider', {
     slidesPerView: 5,
     centeredSlides: true,
-    touchEventsTarget: 'swiper-wrapper',
+    simulateTouch: true, // Включает возможность перетаскивания слайдов мышью
     grabCursor: true,
+    
     keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -107,3 +109,4 @@ function updateSlideWidths(swiper) {
 window.addEventListener('load', function() {
     updateSlideWidths(swiper);
 });
+
