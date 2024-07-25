@@ -69,29 +69,6 @@
     bottom: 0px;
 }
 
-.swiper-slide-active {
-    transform: scale(1);
-
-}
-
-.swiper-slide-next {
-    transform: scale(0.54);
-    width: auto;
-
-}
-
-.swiper-slide-next ~ .swiper-slide {
-    transform: scale(0.41);
-}
-
-.swiper-slide-prev {
-    transform: scale(0.54);
-}
-
-.swiper-slide-prev ~ .swiper-slide {
-    transform: scale(0.41);
-}
-
 //Slider end
 
 //Advantage start

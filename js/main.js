@@ -41,12 +41,11 @@ async function initMap() {
 initMap();
 
 //Слайдер swiper
-new Swiper('.price-slider', {
+const swiper = new Swiper('.price-slider', {
     slidesPerView: 5,
     centeredSlides: true,
-    simulateTouch: true, // Включает возможность перетаскивания слайдов мышью
+    touchEventsTarget: 'swiper-wrapper',
     grabCursor: true,
-    
     keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -79,6 +78,28 @@ new Swiper('.price-slider', {
     }
 });
 
+function initSlideWidths(swiper) {
+    var slides = swiper.slides;
+
+    slides.forEach(function(slide) {
+        var image = slide.querySelector('img');
+        if (image) {
+            image.onload = function() {
+                var imgWidth = image.naturalWidth;
+                slide.style.width = `${imgWidth}px`;
+                // Сохранение исходного размера в data-атрибут
+                slide.dataset.originalWidth = imgWidth;
+                updateSlideWidths(swiper);
+            };
+            if (image.complete) {
+                var imgWidth = image.naturalWidth;
+                slide.style.width = `${imgWidth}px`;
+                slide.dataset.originalWidth = imgWidth;
+            }
+        }
+    });
+}
+
 function updateSlideWidths(swiper) {
     var slides = swiper.slides;
     var activeIndex = swiper.activeIndex;
@@ -98,15 +119,28 @@ function updateSlideWidths(swiper) {
         slide.style.transform = `scale(${scale})`;
         slide.style.zIndex = zIndex;
 
-        var image = slide.querySelector('img');
-        if (image) {
-            var imgWidth = image.naturalWidth * scale;
+        // Используем сохраненный исходный размер
+        var originalWidth = slide.dataset.originalWidth;
+        if (originalWidth) {
+            var imgWidth = originalWidth * scale;
             slide.style.width = `${imgWidth}px`;
         }
     });
 }
 
 window.addEventListener('load', function() {
-    updateSlideWidths(swiper);
+    swiper.on('init', function() {
+        initSlideWidths(swiper);
+    });
+
+    swiper.on('slideChangeTransitionStart', function() {
+        updateSlideWidths(swiper);
+    });
+
+    swiper.on('slideChangeTransitionEnd', function() {
+        updateSlideWidths(swiper);
+    });
+
+    swiper.init();
 });
 
