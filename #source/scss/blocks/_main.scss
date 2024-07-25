@@ -55,27 +55,43 @@
 
 //Slider start
 
+
 .swiper-slide {
+    position: relative;
+    pointer-events: auto;
     transition: transform 0.3s;
+    transform: scale(0.41);
 }
 
-.price-slider__slide.swiper-slide-active {
+.swiper-pagination {
+    position: relative;
 }
 
-.price-slider__slide.swiper-slide-next, .price-slider__slide.swiper-slide-prev {
-    
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0px;
 }
 
-.price-slider__slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev) {
-    
+.swiper-slide-active {
+    transform: scale(1);
+
 }
 
-.swiper {
-    
+.swiper-slide-next {
+    transform: scale(0.54);
+    width: auto;
+
 }
 
-.swiper-wrapper {
-    
+.swiper-slide-next ~ .swiper-slide {
+    transform: scale(0.41);
+}
+
+.swiper-slide-prev {
+    transform: scale(0.54);
+}
+
+.swiper-slide-prev ~ .swiper-slide {
+    transform: scale(0.41);
 }
 
 
