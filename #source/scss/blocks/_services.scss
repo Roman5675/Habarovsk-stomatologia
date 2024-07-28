@@ -24,7 +24,7 @@
     text-transform: uppercase;
     white-space: nowrap;
     @media (max-width: 1920px) {
-        @include adaptive-value( font-size, 87,19 , 1920 , 320 );
+        @include adaptiveValue( font-size, 87,19 );
     }
 }
 .services-intro__text-subtitle {
@@ -35,7 +35,7 @@
     letter-spacing: -2.05px;
     max-width: 665px;
     @media (max-width: 1920px) {
-        @include adaptive-value(font-size ,46 ,12 , 1920 , 320 );
+        @include adaptiveValue(font-size ,46 ,12 );
     }
     @media (max-width: 700px) {
         letter-spacing: -0.75px;
@@ -97,8 +97,8 @@
     column-gap: 107px;
     row-gap: 92px;
     @media (max-width: 1920px) {
-        @include adaptive-value(column-gap ,107 ,23 , 1920 , 320 );
-        @include adaptive-value(row-gap  , 92 , 20 , 1920 , 320 );
+        @include adaptiveValue(column-gap ,107 ,23 );
+        @include adaptiveValue(row-gap  , 92 , 20 );
     }
 }
 .services-cards__card {
@@ -113,12 +113,12 @@
     padding-left: 77px;
     padding-right: 77px;
     @media (max-width: 1920px) {
-        @include adaptive-value(padding-top ,65 ,14 , 1920 , 320 );
-        @include adaptive-value( padding-bottom , 54 , 13 , 1920 , 320 );
-        @include adaptive-value( padding-left , 77 , 10 , 1920 , 320 );
-        @include adaptive-value( padding-right , 77 , 10 , 1920 , 320 );
-        @include adaptive-value( border-radius , 50 , 10 , 1920 , 320 );
-        @include adaptive-value( gap , 53 , 11 , 1920 , 320 );
+        @include adaptiveValue(padding-top ,65 ,14 );
+        @include adaptiveValue( padding-bottom , 54 , 13);
+        @include adaptiveValue( padding-left , 77 , 10 );
+        @include adaptiveValue( padding-right , 77 , 10);
+        @include adaptiveValue( border-radius , 50 , 10  );
+        @include adaptiveValue( gap , 53 , 11 );
     }
     
 }

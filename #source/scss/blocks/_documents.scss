@@ -27,7 +27,9 @@
         }
     }
 
-    button {
+    .normativ__button ,
+    .reglament__button ,
+    .standarts__button {
         position: relative;
         display: flex;
         justify-content: center;

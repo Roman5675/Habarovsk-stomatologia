@@ -3877,8 +3877,15 @@ body._lock {
   white-space: nowrap;
 }
 @media (max-width: 1920px) {
-  .services-intro__text-title {
-    font-size: calc(19px + 68 * (100vw - 320px) / 1600);
+  @supports (font-size: clamp( 1.1875rem , 0.3375rem  +  4.25vw , 5.4375rem )) {
+    .services-intro__text-title {
+      font-size: clamp( 1.1875rem , 0.3375rem  +  4.25vw , 5.4375rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.1875rem , 0.3375rem  +  4.25vw , 5.4375rem )) {
+    .services-intro__text-title {
+      font-size: calc(1.1875rem + 4.25 * (100vw - 20rem) / 100);
+    }
   }
 }
 
@@ -3891,8 +3898,15 @@ body._lock {
   max-width: 665px;
 }
 @media (max-width: 1920px) {
-  .services-intro__text-subtitle {
-    font-size: calc(12px + 34 * (100vw - 320px) / 1600);
+  @supports (font-size: clamp( 0.75rem , 0.325rem  +  2.125vw , 2.875rem )) {
+    .services-intro__text-subtitle {
+      font-size: clamp( 0.75rem , 0.325rem  +  2.125vw , 2.875rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.75rem , 0.325rem  +  2.125vw , 2.875rem )) {
+    .services-intro__text-subtitle {
+      font-size: calc(0.75rem + 2.125 * (100vw - 20rem) / 100);
+    }
   }
 }
 @media (max-width: 700px) {
@@ -4034,11 +4048,29 @@ body._lock {
   row-gap: 92px;
 }
 @media (max-width: 1920px) {
-  .services-cards__body {
-    -webkit-column-gap: calc(23px + 84 * (100vw - 320px) / 1600);
-       -moz-column-gap: calc(23px + 84 * (100vw - 320px) / 1600);
-            column-gap: calc(23px + 84 * (100vw - 320px) / 1600);
-    row-gap: calc(20px + 72 * (100vw - 320px) / 1600);
+  @supports ((-moz-column-gap: clamp( 1.4375rem , 0.3875rem  +  5.25vw , 6.6875rem )) or (column-gap: clamp( 1.4375rem , 0.3875rem  +  5.25vw , 6.6875rem ))) {
+    .services-cards__body {
+      -webkit-column-gap: clamp( 1.4375rem , 0.3875rem  +  5.25vw , 6.6875rem );
+         -moz-column-gap: clamp( 1.4375rem , 0.3875rem  +  5.25vw , 6.6875rem );
+              column-gap: clamp( 1.4375rem , 0.3875rem  +  5.25vw , 6.6875rem );
+    }
+  }
+  @supports not ((-moz-column-gap: clamp( 1.4375rem , 0.3875rem  +  5.25vw , 6.6875rem )) or (column-gap: clamp( 1.4375rem , 0.3875rem  +  5.25vw , 6.6875rem ))) {
+    .services-cards__body {
+      -webkit-column-gap: calc(1.4375rem + 5.25 * (100vw - 20rem) / 100);
+         -moz-column-gap: calc(1.4375rem + 5.25 * (100vw - 20rem) / 100);
+              column-gap: calc(1.4375rem + 5.25 * (100vw - 20rem) / 100);
+    }
+  }
+  @supports (row-gap: clamp( 1.25rem , 0.35rem  +  4.5vw , 5.75rem )) {
+    .services-cards__body {
+      row-gap: clamp( 1.25rem , 0.35rem  +  4.5vw , 5.75rem );
+    }
+  }
+  @supports not (row-gap: clamp( 1.25rem , 0.35rem  +  4.5vw , 5.75rem )) {
+    .services-cards__body {
+      row-gap: calc(1.25rem + 4.5 * (100vw - 20rem) / 100);
+    }
   }
 }
 
@@ -4062,13 +4094,65 @@ body._lock {
   padding-right: 77px;
 }
 @media (max-width: 1920px) {
-  .services-cards__card {
-    padding-top: calc(14px + 51 * (100vw - 320px) / 1600);
-    padding-bottom: calc(13px + 41 * (100vw - 320px) / 1600);
-    padding-left: calc(10px + 67 * (100vw - 320px) / 1600);
-    padding-right: calc(10px + 67 * (100vw - 320px) / 1600);
-    border-radius: calc(10px + 40 * (100vw - 320px) / 1600);
-    gap: calc(11px + 42 * (100vw - 320px) / 1600);
+  @supports (padding-top: clamp( 0.875rem , 0.2375rem  +  3.1875vw , 4.0625rem )) {
+    .services-cards__card {
+      padding-top: clamp( 0.875rem , 0.2375rem  +  3.1875vw , 4.0625rem );
+    }
+  }
+  @supports not (padding-top: clamp( 0.875rem , 0.2375rem  +  3.1875vw , 4.0625rem )) {
+    .services-cards__card {
+      padding-top: calc(0.875rem + 3.1875 * (100vw - 20rem) / 100);
+    }
+  }
+  @supports (padding-bottom: clamp( 0.8125rem , 0.3rem  +  2.5625vw , 3.375rem )) {
+    .services-cards__card {
+      padding-bottom: clamp( 0.8125rem , 0.3rem  +  2.5625vw , 3.375rem );
+    }
+  }
+  @supports not (padding-bottom: clamp( 0.8125rem , 0.3rem  +  2.5625vw , 3.375rem )) {
+    .services-cards__card {
+      padding-bottom: calc(0.8125rem + 2.5625 * (100vw - 20rem) / 100);
+    }
+  }
+  @supports (padding-left: clamp( 0.625rem , -0.2125rem  +  4.1875vw , 4.8125rem )) {
+    .services-cards__card {
+      padding-left: clamp( 0.625rem , -0.2125rem  +  4.1875vw , 4.8125rem );
+    }
+  }
+  @supports not (padding-left: clamp( 0.625rem , -0.2125rem  +  4.1875vw , 4.8125rem )) {
+    .services-cards__card {
+      padding-left: calc(0.625rem + 4.1875 * (100vw - 20rem) / 100);
+    }
+  }
+  @supports (padding-right: clamp( 0.625rem , -0.2125rem  +  4.1875vw , 4.8125rem )) {
+    .services-cards__card {
+      padding-right: clamp( 0.625rem , -0.2125rem  +  4.1875vw , 4.8125rem );
+    }
+  }
+  @supports not (padding-right: clamp( 0.625rem , -0.2125rem  +  4.1875vw , 4.8125rem )) {
+    .services-cards__card {
+      padding-right: calc(0.625rem + 4.1875 * (100vw - 20rem) / 100);
+    }
+  }
+  @supports (border-radius: clamp( 0.625rem , 0.125rem  +  2.5vw , 3.125rem )) {
+    .services-cards__card {
+      border-radius: clamp( 0.625rem , 0.125rem  +  2.5vw , 3.125rem );
+    }
+  }
+  @supports not (border-radius: clamp( 0.625rem , 0.125rem  +  2.5vw , 3.125rem )) {
+    .services-cards__card {
+      border-radius: calc(0.625rem + 2.5 * (100vw - 20rem) / 100);
+    }
+  }
+  @supports (gap: clamp( 0.6875rem , 0.1625rem  +  2.625vw , 3.3125rem )) {
+    .services-cards__card {
+      gap: clamp( 0.6875rem , 0.1625rem  +  2.625vw , 3.3125rem );
+    }
+  }
+  @supports not (gap: clamp( 0.6875rem , 0.1625rem  +  2.625vw , 3.3125rem )) {
+    .services-cards__card {
+      gap: calc(0.6875rem + 2.625 * (100vw - 20rem) / 100);
+    }
   }
 }
 
@@ -4770,7 +4854,9 @@ body._lock {
     letter-spacing: calc(-0.57px + -2.04 * (100vw - 320px) / 1600);
   }
 }
-.documents-content button {
+.documents-content .normativ__button,
+.documents-content .reglament__button,
+.documents-content .standarts__button {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4792,11 +4878,15 @@ body._lock {
   margin-top: 180px;
   margin-bottom: 175px;
 }
-.documents-content button:hover {
+.documents-content .normativ__button:hover,
+.documents-content .reglament__button:hover,
+.documents-content .standarts__button:hover {
   background: var(--hover-button-color);
 }
 @media (max-width: 1920px) {
-  .documents-content button {
+  .documents-content .normativ__button,
+  .documents-content .reglament__button,
+  .documents-content .standarts__button {
     width: calc(100px + 362 * (100vw - 320px) / 1600);
     height: calc(22px + 81 * (100vw - 320px) / 1600);
     border-radius: calc(11px + 40.5 * (100vw - 320px) / 1600);
