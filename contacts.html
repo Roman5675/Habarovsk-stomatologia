@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Шаблон сайт</title>
-	<meta name="description" content="" />
-	<link rel="stylesheet" href="./css/styles.css" />
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./css/styles.css">
 	<script src="https://api-maps.yandex.ru/v3/?apikey=f5147383-16e0-4746-957d-6cb99ba97231&lang=ru_RU"></script>
 </head>
 <body>
@@ -17,7 +17,7 @@
     
     <div class="header__menu menu">
         <div class="menu__icon">
-            <p>Menu</p>
+            <p class="menu__icon-text">Menu</p>
         </div>
         <nav class="menu__body">
             <a href="/" class="header__logo-mobile">
@@ -34,7 +34,7 @@
                     <a href="./command.html" class="menu__link">КОМАНДА</a>
                 </li>
                 <li>
-                    <a href="https://yandex.ru/profile/1024933200?no-distribution=1&view-state=mini&source=wizbiz_new_map_single" class="menu__link link">ОТЗЫВЫ</a>
+                    <a href="https://yandex.ru/maps/org/stomeks/1024933200/reviews/?ll=135.098534%2C48.460457&z=13" class="menu__link link">ОТЗЫВЫ</a>
                 </li>
                 <li>
                     <a href="./services.html" class="menu__link link">УСЛУГИ</a>
@@ -46,7 +46,7 @@
                     <a href="./documents.html" class="menu__link link">ДОКУМЕНТЫ</a>
                 </li>
             </ul>
-            <a href="#" class="menu__button-mobile">
+            <a href="https://reservi.ru/" class="menu__button-mobile">
                 <p class="menu__button-mobile-text">Записаться</p>
             </a>
         </nav>
@@ -56,14 +56,17 @@
 
 
 	<main class="content container">
+		<h1 class="visually-hidden">About us</h1>
+
 		<section class="enum">
+			<h2 class="visually-hidden">a</h2>
 			<div class="enum__column">
 
 				<div class="enum__first-row">
 
 					<div class="enum__first-row-left">
 						<div class="enum__title">
-							<h2>НАШ АДРЕС:</h2>
+							<h2 class="enum__title-text">НАШ АДРЕС:</h2>
 						</div>
 	
 						<div class="enum__subtitle">
@@ -74,13 +77,13 @@
 
 					<div class="enum__first-row-right enum__margin-left">
 							<div class="enum__title">
-								<h2>ЗАПИСЬ</h2>
+								<h2 class="enum__title-text">ЗАПИСЬ</h2>
 							</div>
 	
 							<div class="enum__subtitle">
 								<p>Запишитесь на прием
 									к любому из наших специалистов 
-									со скидкой 5 % 
+									со скидкой <span class="enum__discount">5 %</span> 
 									на первое посещение</p>
 							</div>
 	
@@ -95,7 +98,7 @@
 				<div class="enum__second-row">
 					<div class="enum__second-row-left">
 						<div class="enum__title">
-							<h2>РАССРОЧКА</h2>
+							<h2 class="enum__title-text">РАССРОЧКА</h2>
 						</div>
 	
 						<div class="enum__subtitle">
@@ -110,7 +113,7 @@
 
 					<div class="enum__second-row-right enum__margin-left">
 						<div class="enum__title">
-							<h2>INSTAGRAM</h2>
+							<h2 class="enum__title-text">INSTAGRAM</h2>
 						</div>
 	
 						<div class="enum__subtitle">
@@ -131,7 +134,7 @@
 				<div class="enum__third-row">
 					<div class="enum__third-row-left">
 						<div class="enum__title">
-							<h2>TELEGRAM</h2>
+							<h2 class="enum__title-text">TELEGRAM</h2>
 						</div>
 	
 						<div class="enum__subtitle">
@@ -145,7 +148,7 @@
 
 					<div class="enum__third-row-right enum__margin-left">
 						<div class="enum__title">
-							<h2>ОТЗЫВЫ</h2>
+							<h2 class="enum__title-text">ОТЗЫВЫ</h2>
 						</div>
 	
 						<div class="enum__subtitle">
@@ -166,8 +169,10 @@
 		</section>
 
 		<section class="location">
+			<h2 class="visually-hidden">a</h2>
+			
 			<div id="map" class="map"></div>
-			<a class="location__button" href="https://yandex.ru/maps/org/stomekspert/1024933200/?ll=135.098534%2C48.460457&mode=search&sll=135.098534%2C48.460457&sspn=0.082054%2C0.035336&text=%D0%A1%D1%82%D0%BE%D0%BC%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82&z=14">
+			<a class="location__button" href="https://yandex.ru/maps/76/khabarovsk/?ll=135.098534%2C48.460457&mode=search&oid=1024933200&ol=biz&sll=135.098534%2C48.460457&sspn=0.082054%2C0.035336&text=%D0%A1%D1%82%D0%BE%D0%BC%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82&z=14">
 				<p>Перейти</p>
 			</a>
 		</section>
@@ -176,14 +181,16 @@
 	<div class="footer__column">
 		<div class="footer__top">
 			<div class="footer__top-subtitle">
-				<p>не думай</p>
+				<p class="footer__top-subtitle-text">не думай</p>
 			</div>
 				
 			<div class="footer__bottom">
 				<div class="footer__top-title">
-					<h2>ЗАПИШИСЬ</h2>
+					<h2 class="footer__top-title-text">ЗАПИШИСЬ</h2>
 				</div>
-				<img src="./img/svg/arrow-footer.svg" alt="#">
+				<a class="footer__arrow-link" href="https://reservi.ru/">
+					<img src="./img/svg/arrow-footer.svg" alt="#">
+				</a>
 			</div>
 		</div>
 	
@@ -191,56 +198,56 @@
 	
 		<div class="footer__list-bottom">
 			<div class="footer__text">
-				<a href="">главная</a>
+				<a href="/">главная</a>
 			</div>
 	
 			<div class="footer__text">
-				<a href="">+7 (444) 987 54 67</a>
+				<a href="/">+7 (444) 987 54 67</a>
 			</div>
 	
 			<div class="footer__text">
-				<a href="">stomexpert@gmail.com</a>
+				<a href="/">stomexpert@gmail.com</a>
 			</div>
 		
 			<div class="footer__text">
-				<a href="">stomexpert.ru</a>
+				<a href="/">stomexpert.ru</a>
 			</div>
 	
 			<div class="footer__text">
-				<a href="">команда</a>
+				<a href="/">команда</a>
 			</div>
 	
 			<div class="footer__text">
-				<a href="">рассрочка</a>
+				<a href="/">рассрочка</a>
 			</div>
 		</div>
 	
 		<div class="footer__list-bottom-mobile">
 			<div class="footer__list-bottom-first-row">
 				<div class="footer__text">
-					<a href="">главная</a>
+					<a href="/">главная</a>
 				</div>
 	
 				<div class="footer__text">
-					<a href="">+7 (444) 987 54 67</a>
+					<a href="/">+7 (444) 987 54 67</a>
 				</div>
 	
 				<div class="footer__text">
-					<a href="">stomexpert@gmail.com</a>
+					<a href="/">stomexpert@gmail.com</a>
 				</div>
 			</div>
 			
 			<div class="footer__list-bottom-second-row">
 				<div class="footer__text">
-					<a href="">stomexpert.ru</a>
+					<a href="/">stomexpert.ru</a>
 				</div>
 	
 				<div class="footer__text">
-					<a href="">команда</a>
+					<a href="/">команда</a>
 				</div>
 	
 				<div class="footer__text">
-					<a href="">рассрочка</a>
+					<a href="/">рассрочка</a>
 				</div>
 			</div>
 		</div>

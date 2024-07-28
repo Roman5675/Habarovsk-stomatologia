@@ -1,20 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
-
 @font-face {
-    font-family: 'SF Pro Display';
-    src: url("../fonts/SF-Pro-Display-Regular.woff") format('woff');
-    font-weight: 400;
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto-Light.woff2") format('woff2');
+    font-weight: 300;
     font-style: normal;
-    font-display: swap; 
-    
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Manifold Extended CF';
-    src: url("../fonts/ManifoldExtendedCF-Light.woff2") format('woff2');
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto-Regular.woff2") format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto-Medium.woff2") format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto-Bold.woff2") format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url("../fonts/RobotoCondensed-Light.woff2") format('woff2');
     font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url("../fonts/RobotoCondensed-Regular.woff2") format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url("../fonts/RobotoCondensed-Bold.woff2") format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url("../fonts/SFProDisplay-Regular.woff2") format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url("../fonts/RobotoSlab-Regular.woff2") format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url("../fonts/RobotoSlab-Bold.woff2") format('woff2');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -23,6 +82,14 @@
     font-family: 'Manifold Extended CF';
     src: url("../fonts/ManifoldExtendedCF-Thin.woff2") format('woff2');
     font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manifold Extended CF';
+    src: url("../fonts/ManifoldExtendedCF-Light.woff2") format('woff2');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }

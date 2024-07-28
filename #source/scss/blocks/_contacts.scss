@@ -3,6 +3,16 @@
     margin-top: 66px;
     @include adaptiveValue( margin-top , 66 , 48 );
 }
+
+.enum__discount {
+    
+    background: linear-gradient(270deg, #c01769 0%, #923362 100%);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .enum__vertical-line {
     position: absolute;
     height: 10px;
@@ -54,7 +64,9 @@
     
 }
 
-.enum__title {
+.enum__title-text {
+    font-family: var(--roboto-condensed);
+    color: #727272;
     font-size: 70px;
     letter-spacing: -2.06px;
     margin-top: 96px;
@@ -64,8 +76,10 @@
         
     }
 }
+
 .enum__subtitle {
-    font-family: 'Roboto Condensed';
+    font-family: var(--roboto-condensed);
+    color: #727272;
     font-size: 38px;
     letter-spacing: -2.06px;
     
@@ -141,9 +155,9 @@
     width: 50%;
     height: 818px;
     h2{
-        margin-bottom: 137px;
+        margin-bottom: 108px;
         @media (max-width: 1920px) {
-            @include adaptive-value(margin-bottom ,137 , 30, 1920 , 320 );
+            @include adaptive-value(margin-bottom ,108 , 30, 1920 , 320 );
         }
         
     }
@@ -183,7 +197,7 @@
     p{
         margin-bottom: 280px;
         @media (max-width: 1920px) {
-            @include adaptive-value( margin-bottom,280 ,51.6 , 1920 , 320 );
+            @include adaptive-value( margin-bottom,280 ,52 , 1920 , 320 );
         }
     }
     @media (max-width: 1920px) {
@@ -202,7 +216,7 @@
     p{
         margin-bottom: 280px;
         @media (max-width: 1920px) {
-            @include adaptive-value( margin-bottom,280 ,47 , 1920 , 320 );
+            @include adaptive-value( margin-bottom,280 ,52 , 1920 , 320 );
         }
     }
     @media (max-width: 1920px) {
@@ -238,6 +252,9 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 0px;
+    }
+    &:hover {
+        background: var(--hover-button-color);
     }
     @media (max-width: 1920px) {
         @include adaptive-value(width , 462 , 100 , 1920 , 320 );
@@ -281,6 +298,9 @@
     background-color: #727272;
     p {
         color: #FFFFFF;
+    }
+    &:hover {
+        background: var(--hover-button-color);
     }
     @media (max-width: 1920px) {
         @include adaptive-value(bottom ,92 ,22 , 1920 , 320 );

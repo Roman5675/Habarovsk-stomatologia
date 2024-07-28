@@ -16,10 +16,14 @@
     position: relative;
 }
 .welcome__title {
+    font-family: var(--roboto-condensed);
     font-size: 48px;
     letter-spacing: -2.01px;
     max-width: 680px;
     text-align: left;
+    span {
+        font-weight: 700
+    }
     @media (max-width: 1920px) {
         @include adaptive-value(font-size ,48 ,12 , 1920 , 320 );
     }
@@ -57,6 +61,9 @@
         -webkit-text-fill-color: transparent;
         margin-bottom: 0px;
     }
+    &:hover {
+        background: var(--hover-button-color);
+    }
     @media (max-width: 1920px) {
         @include adaptive-value(width , 358 , 79 , 1920 , 320 );
         @include adaptive-value(height ,103  , 23 , 1920 , 320 );
@@ -76,9 +83,6 @@
     margin-bottom: 130px;
 }
 
-.doctors__body {
-
-}
 .doctors__cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -119,7 +123,7 @@
     max-width: 391px;
 }
 .doctors__title {
-    font-family: 'Roboto Condensed';
+    font-family: var(--roboto-condensed);
     font-size: 47px;
     letter-spacing: -1.55px;
     margin-bottom: 80px;
@@ -191,11 +195,16 @@
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     height: 129px;
+    &:hover {
+        background: var(--hover-button-color);
+    }
     @include adaptiveValue( height , 129 , 62 );
     @include adaptiveValue( border-bottom-left-radius , 25 , 10 );
     @include adaptiveValue( border-bottom-right-radius , 25 , 10 );
 }
 .doctors__card-button-text {
+    font-family: var(--sf-pro-display);
+    color: #2e2e2e;
     font-size: 40px;
     @include adaptiveValue( font-size , 40 , 20 );
 }

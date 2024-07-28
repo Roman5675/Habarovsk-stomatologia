@@ -1,12 +1,23 @@
 //Тут будут глобальные переменные
 :root {
     --container-width:1400px; //Ширина контентной части
-    --container-padding-x: 261px //Отступ слева и справа контентной части
+    --container-padding-x: 261px; //Отступ слева и справа контентной части
 
     --section-padding-y-main:16px; //Отступ снизу и сверху у секций
 
     --font-family-base: 'Roboto', sans-serif;
+    --roboto-condensed: 'Roboto Condensed', sans-serif;
+    --sf-pro-display: 'SF Pro Display', sans-serif;
+    --roboto-slab: 'Roboto Slab', sans-serif;
+    --manifold-extended-cf: 'Manifold Extended CF', sans-serif;
 
+    --hover-button-color: #e2d8d8;
+    
     --transition-duration: 0.2s;
 }
 
+
+// font-family: var(--roboto-condensed);
+// font-family: var(--sf-pro-display);
+// font-family: var(--roboto-slab);
+// font-family: var(--manifold-extended-cf);

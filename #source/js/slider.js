@@ -1,4 +1,3 @@
-//Слайдер swiper
 const swiper = new Swiper('.price-slider', {
     slidesPerView: 5,
     centeredSlides: true,

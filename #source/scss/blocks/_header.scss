@@ -73,8 +73,9 @@ body._lock {
 }
 
 .menu__list li:hover {
-    background: #bfe8f5;
+    color: #AF5871;
 }
+
 
 .menu__link {
     font-size: 34px;
@@ -159,6 +160,9 @@ body._lock {
     }
     @include adaptive-value(border-radius  , 21 , 14 , 480 , 320 );
     @include adaptiveValue( margin-bottom , 29 , 19 , 480 , 320 , 1);
+    &:hover {
+        background: var(--hover-button-color);
+    }
 }
 .menu__button-mobile-text {
     display: flex;
@@ -172,5 +176,11 @@ body._lock {
     @include adaptive-value( letter-spacing , -2.61 , -0.73, 1920 , 320 );
     @include adaptiveValue( width , 152 , 102 , 480 , 320 , 1 );
     @include adaptiveValue( height , 43 , 29 , 480 , 320 , 1  );
+}
+
+.menu__icon-text::before {
+    content: "+";
+    margin-right: 5px;
+    color: #3EEB45;
 }
 

@@ -7,7 +7,6 @@
 
 //Section welcome start
 .welcome {
-    
     margin-bottom: 70px;
 }
 
@@ -56,19 +55,22 @@
 }
 
 .welcome__body-title {
+    font-family: var(--roboto-slab);
+    font-weight: 400;
+    color: #727272;
     text-align: center;
     margin-bottom: 70px;
 }
 
 .welcome__body-subtitle {
+    font-family: var(--roboto-condensed);
+    font-weight: 300;
+    color: #727272;
     text-align: center;
 }
 //Section welcome end
 
 //Section intro start
-.intro {
-}
-
 .intro__body {
     display: flex;
     gap: 75px;
@@ -94,6 +96,8 @@
     @include adaptiveValue( border-radius , 50 , 29 );
 }
 .intro__left-title {
+    font-family: var(--roboto-slab);
+    color: #727272;
     font-size: 32px;
     margin-bottom: 44px;
     @include adaptiveValue( font-size , 32 , 19 );
@@ -102,10 +106,10 @@
     }
 }
 .intro__left-text {
-    font-family: 'Roboto Condensed';
+    font-family: var(--roboto-condensed);
     font-weight: 300;
-    letter-spacing: -0.87px;
     color: #727272;
+    letter-spacing: -0.87px;
     font-size: 32px;
     @include adaptiveValue( font-size , 32 , 19 );
 }
@@ -129,7 +133,8 @@
 .intro__middle-text {
     font-size: 20px;
     @include adaptiveValue( font-size  , 20 , 12 );
-    font-family: 'Roboto Condensed';
+    font-family: var(--roboto-condensed);
+    color: #313131;
     margin-bottom: 55px;
     padding-top: 52px;
     padding-right: 23px;
@@ -143,6 +148,7 @@
 .intro__middle-title {
     font-size: 48px;
     font-weight: 500;
+    color: #313131;
     padding-bottom: 40px;
     padding-left: 18px;
     @include adaptiveValue( font-size , 48 , 30 );
@@ -152,8 +158,6 @@
 
 }
 
-.intro__middle-second-title {
-}
 .intro__right {
     max-width: 510px;
     border-radius: 50px;
@@ -169,6 +173,8 @@
     @include adaptiveValue( border-radius , 50 , 29 );
 }
 .intro__right-title {
+    font-family: var(--roboto-slab);
+    color: #272727;
     font-size: 32px;
     @include adaptiveValue( font-size , 32 , 19 );
     max-width: 371px;
@@ -176,25 +182,26 @@
     margin-bottom: 40px;
 }
 .intro__right-text {
+    font-family: var(--roboto-condensed);
+    font-weight: 300;
+    color: #272727;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 41px;
     font-size: 32px;
     @include adaptiveValue( font-size , 32 , 19 );
-    font-family: 'Roboto Condensed';
 }
-.intro__right-text-1 {
-}
-.intro__right-text-2 {
-}
-.intro__right-text-3 {
-}
+
 //Section intro end
 
 //Section achievements start
 
 .achievements__title {
+    font-family: var(--roboto-slab);
+    font-weight: 700;
+    color: #272727;
+    text-transform: uppercase;
     margin-bottom: 43px;
     text-align: center;
     font-size: 28px;
@@ -216,7 +223,7 @@
     }
     
     .achievements__card:nth-child(1) {
-        font-family: 'Roboto Condensed';
+        font-family: var(--roboto-condensed);
         text-transform: uppercase;
         padding-top: 186px;
         padding-left: 46px;
@@ -226,7 +233,7 @@
     }
 
     .achievements__card:nth-child(2) {
-        font-family: 'Roboto Condensed';
+        font-family: var(--roboto-condensed);
         text-transform: uppercase;
         padding-top: 186px;
         padding-left: 46px;
@@ -236,7 +243,7 @@
     }
 
     .achievements__card:nth-child(3) {
-        font-family: 'Roboto Condensed';
+        font-family: var(--roboto-condensed);
         text-transform: uppercase;
         padding-top: 186px;
         padding-left: 46px;
@@ -254,6 +261,7 @@
         border-bottom-left-radius: 22px;
         border-bottom-right-radius: 22px;
         p {
+            font-family: var(--sf-pro-display);
             font-size: 34px;
             @include adaptiveValue( font-size , 34 , 20 );
         }
@@ -276,11 +284,21 @@
     font-size: 32px;
     @include adaptiveValue( font-size , 32 , 15 );
 }
+
+.achievements__card-button {
+    &:hover {
+        background: var(--hover-button-color);
+    }
+}
 //Section achievements end
 
 //Section principles start
 
 .principles__title-top {
+    font-family: var(--roboto-slab);
+    font-weight: 700;
+    color: #2e2e2e;
+    text-transform: uppercase;
     font-size: 32px;
     margin-bottom: 43px;
     text-align: center;
@@ -289,6 +307,9 @@
 }
 
 .principles__title {
+    font-family: var(--roboto-slab);
+    font-weight: 700;
+    color: #2e2e2e;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 43px;
@@ -317,7 +338,8 @@
         padding-left: 46px;
         padding-right: 30px;
         p {
-            font-family: 'Roboto Condensed';
+            font-family: var(--roboto-condensed);
+            color: #2e2e2e;
         }
         @include adaptiveValue( padding-top , 186 , 60 );
         @include adaptiveValue(  padding-left , 46 , 21 );
@@ -329,7 +351,8 @@
         padding-left: 46px;
         padding-right: 30px;
         p {
-            font-family: 'Roboto Condensed';
+            font-family: var(--roboto-condensed);
+            color: #2e2e2e;
         }
         @include adaptiveValue( padding-top , 186 , 60 );
         @include adaptiveValue(  padding-left , 46 , 21 );
@@ -341,7 +364,8 @@
         padding-left: 46px;
         padding-right: 30px;
         p {
-            font-family: 'Roboto Condensed';
+            font-family: var(--roboto-condensed);
+            color: #2e2e2e;
         }
         @include adaptiveValue( padding-top , 186 , 60 );
         @include adaptiveValue(  padding-left , 46 , 21 );
@@ -356,6 +380,8 @@
         border-bottom-left-radius: 22px;
         border-bottom-right-radius: 22px;
         p {
+            font-family: var(--sf-pro-display);
+            color: #2e2e2e;
             font-size: 34px;
             @include adaptiveValue( font-size , 34 , 20 );
         }
@@ -385,6 +411,10 @@
 }
 
 .team__title {
+    font-family: var(--roboto-slab);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2e2e2e;
     font-size: 48px;
     text-align: center;
     margin-bottom: 193px;
@@ -392,7 +422,9 @@
     @include adaptiveValue( margin-bottom , 193 , 70 );
 }
 .team__body {
-    font-family: 'Roboto Condensed';
+    font-family: var(--roboto-condensed);
+    text-transform: uppercase;
+    color: #2e2e2e;
     display: flex;
     justify-content: space-between;
     align-items: center;
