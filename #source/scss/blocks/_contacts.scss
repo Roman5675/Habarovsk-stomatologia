@@ -31,9 +31,9 @@
     top: 0px;
     right: 5px;
     @media (max-width: 1920px) {
-        @include adaptive-value(height , 10 , 2.16, 1920 , 320 );
-        @include adaptive-value(width , 2373 , 521 , 1920 , 320 );
-        @include adaptive-value(right, 5 , 2, 1920 , 320 );
+        @include adaptiveValue(height , 10 , 2.16 );
+        @include adaptiveValue(width , 2373 , 521);
+        @include adaptiveValue(right, 5 , 2 );
     }
 }
 .enum__horizontal-line{
@@ -53,7 +53,7 @@
     bottom: 0px;
     right: 0px;
     @media (max-width: 1920px) {
-    @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+    @include adaptiveValue(height ,10 ,2.04 );
     }
 }
 
@@ -71,8 +71,8 @@
     letter-spacing: -2.06px;
     margin-top: 96px;
     @media (max-width: 1920px) {
-        @include adaptive-value( font-size ,70,19,1920,320 );
-        @include adaptive-value( margin-top , 96 , 21 , 1920 , 320 );
+        @include adaptiveValue( font-size , 70 , 19 );
+        @include adaptiveValue( margin-top , 96 , 21 );
         
     }
 }
@@ -84,8 +84,8 @@
     letter-spacing: -2.06px;
     
     @media (max-width: 1920px) {
-        @include adaptive-value( font-size ,38,11,1920,320 );
-        @include adaptive-value(  letter-spacing , -2.06 , -0.45 , 1920 , 320 );
+        @include adaptiveValue( font-size ,38,11 );
+        @include adaptiveValue(  letter-spacing , -2.06 , -0.45 );
         
     }
 }
@@ -103,7 +103,7 @@
         margin-bottom: 16%;
     }
     @media (max-width: 1920px) {
-        @include adaptive-value( height, 788, 171, 1920 , 320 );
+        @include adaptiveValue( height, 788, 171 );
     }
     
 }
@@ -114,17 +114,17 @@
     h2{
         margin-bottom: 50px;
         @media (max-width: 1920px) {
-            @include adaptive-value(margin-bottom ,50 ,10 , 1920 , 320 );
+            @include adaptiveValue(margin-bottom ,50 ,10 );
         }
     }
     .enum__subtitle{
         margin-bottom: 105px;
         @media (max-width: 1920px) {
-            @include adaptive-value(margin-bottom ,105 ,9.5 , 1920 , 320 );
+            @include adaptiveValue(margin-bottom ,105 ,9.5 );
         }
     }
     @media (max-width: 1920px) {
-        @include adaptive-value( height, 788, 171, 1920 , 320 );
+        @include adaptiveValue( height, 788, 171 );
     }
 }
 
@@ -138,17 +138,17 @@
     h2{
         margin-bottom: 108px;
         @media (max-width: 1920px) {
-            @include adaptive-value( margin-bottom, 108,23.6 , 1920 , 320 );
+            @include adaptiveValue( margin-bottom, 108,23.6 );
         }
     }
     p{
         margin-bottom: 132px;
         @media (max-width: 1920px) {
-            @include adaptive-value(margin-bottom ,132 ,28 , 1920 , 320 );
+            @include adaptiveValue(margin-bottom ,132 ,28 );
         }
     }
     @media (max-width: 1920px) {
-        @include adaptive-value( height, 818, 178, 1920 , 320 );
+        @include adaptiveValue( height, 818, 178 );
     }
 }
 .enum__second-row-right {
@@ -157,18 +157,18 @@
     h2{
         margin-bottom: 108px;
         @media (max-width: 1920px) {
-            @include adaptive-value(margin-bottom ,108 , 30, 1920 , 320 );
+            @include adaptiveValue(margin-bottom ,108 , 30 );
         }
         
     }
     p{
         margin-bottom: 103px;
         @media (max-width: 1920px) {
-            @include adaptive-value(margin-bottom ,103 ,22, 1920 , 320 );
+            @include adaptiveValue(margin-bottom ,103 ,22 );
         }
     }
     @media (max-width: 1920px) {
-        @include adaptive-value( height, 818, 178, 1920 , 320 );
+        @include adaptiveValue( height, 818, 178 );
     }
 }
 .enum__third-row {
@@ -178,11 +178,11 @@
     .enum__horizontal-line{
         top: 497px;
         @media (max-width: 1920px) {
-            @include adaptive-value(top ,497 ,100 , 1920 , 320 );
+            @include adaptiveValue(top ,497 ,100 );
         }
     }
     @media (max-width: 1920px) {
-        @include adaptive-value(margin-bottom ,150 ,32 , 1920 , 320 );
+        @include adaptiveValue(margin-bottom ,150 ,32 );
     }
 }
 .enum__third-row-left {
@@ -191,17 +191,17 @@
     h2{
         margin-bottom: 108px;
         @media (max-width: 1920px) {
-            @include adaptive-value(margin-bottom , 108 ,23.6 , 1920 , 320 );
+            @include adaptiveValue(margin-bottom , 108 ,23.6 );
         }
     }
     p{
         margin-bottom: 280px;
         @media (max-width: 1920px) {
-            @include adaptive-value( margin-bottom,280 ,52 , 1920 , 320 );
+            @include adaptiveValue( margin-bottom,280 ,52 );
         }
     }
     @media (max-width: 1920px) {
-        @include adaptive-value(height ,767 , 167, 1920 , 320 );
+        @include adaptiveValue(height ,767 , 167 );
     }
 }
 .enum__third-row-right {
@@ -210,24 +210,24 @@
     h2{
         margin-bottom: 108px;
         @media (max-width: 1920px) {
-            @include adaptive-value(margin-bottom , 108 ,17 , 1920 , 320 );
+            @include adaptiveValue(margin-bottom , 108 ,17 );
         }
     }
     p{
         margin-bottom: 280px;
         @media (max-width: 1920px) {
-            @include adaptive-value( margin-bottom,280 ,52 , 1920 , 320 );
+            @include adaptiveValue( margin-bottom,280 ,52 );
         }
     }
     @media (max-width: 1920px) {
-        @include adaptive-value(height ,767 , 167, 1920 , 320 );
+        @include adaptiveValue(height ,767 , 167 );
     }
 }
 
 .enum__margin-left{
     margin-left: 42px;
     @media (max-width: 1920px) {
-    @include adaptive-value( margin-left,42 , 9, 1920 , 320 );
+    @include adaptiveValue( margin-left,42 , 9 );
     }
 }
 
@@ -257,12 +257,12 @@
         background: var(--hover-button-color);
     }
     @media (max-width: 1920px) {
-        @include adaptive-value(width , 462 , 100 , 1920 , 320 );
-        @include adaptive-value(height ,103  , 22 , 1920 , 320 );
-        @include adaptive-value(border-radius  , 51.5 , 11 , 1920 , 320 );
-        @include adaptive-value( border-width , 2 , 0.5 , 1920 , 320 );
-        @include adaptive-value( font-size , 30 , 12 , 1920 , 320 );
-        @include adaptive-value( letter-spacing , -2.61 , -0.57, 1920 , 320 );
+        @include adaptiveValue(width , 462 , 100 );
+        @include adaptiveValue(height ,103  , 22 );
+        @include adaptiveValue(border-radius  , 51.5 , 11 );
+        @include adaptiveValue( border-width , 2 , 0.5 );
+        @include adaptiveValue( font-size , 30 , 12 );
+        @include adaptiveValue( letter-spacing , -2.61 , -0.57 );
     }
 }
 //Section enum end
@@ -277,8 +277,8 @@
     height: 1535px;
     margin-bottom: 130px;
     @media (max-width: 1920px) {
-    @include adaptive-value(height ,1535 , 333, 1920 , 320 );
-    @include adaptive-value(width  , 1398 , 304 , 1920 , 320 );
+    @include adaptiveValue(height ,1535 , 333 );
+    @include adaptiveValue(width  , 1398 , 304 );
     }
 }
 
@@ -303,12 +303,12 @@
         background: var(--hover-button-color);
     }
     @media (max-width: 1920px) {
-        @include adaptive-value(bottom ,92 ,22 , 1920 , 320 );
-        @include adaptive-value(width , 462 , 100 , 1920 , 320 );
-        @include adaptive-value(height ,103  , 22 , 1920 , 320 );
-        @include adaptive-value(border-radius  , 51.5 , 11 , 1920 , 320 );
-        @include adaptive-value( font-size , 30 , 12 , 1920 , 320 );
-        @include adaptive-value( letter-spacing , -2.61 , -0.57, 1920 , 320 );
+        @include adaptiveValue(bottom ,92 ,22 );
+        @include adaptiveValue(width , 462 , 100 );
+        @include adaptiveValue(height ,103  , 22 );
+        @include adaptiveValue(border-radius  , 51.5 , 11 );
+        @include adaptiveValue( font-size , 30 , 12 , 1920 , 320 );
+        @include adaptiveValue( letter-spacing , -2.61 , -0.57 );
     }
 }
 //Section location end

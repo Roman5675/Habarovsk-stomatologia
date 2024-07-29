@@ -6,7 +6,7 @@
     color: #727272;
     margin-bottom: 130px;
     @media (max-width: 1920px) {
-        @include adaptive-value( gap, 130,22 , 1920 , 320 );
+        @include adaptiveValue( gap, 130,22 );
     }
 
     .button-text {
@@ -22,8 +22,8 @@
         -webkit-text-fill-color: transparent;
         //End
         @media (max-width: 1920px) {
-            @include adaptive-value( font-size , 45 , 12 , 1920 , 320 );
-            @include adaptive-value( letter-spacing , -2.61 , -0.57, 1920 , 320 );
+            @include adaptiveValue( font-size , 45 , 12 );
+            @include adaptiveValue( letter-spacing , -2.61 , -0.57 );
         }
     }
 
@@ -52,12 +52,12 @@
         }
 
         @media (max-width: 1920px) {
-            @include adaptive-value(width , 462 , 100 , 1920 , 320 );
-            @include adaptive-value(height ,103  , 22 , 1920 , 320 );
-            @include adaptive-value(border-radius  , 51.5 , 11 , 1920 , 320 );
-            @include adaptive-value( border-width , 2 , 0.5 , 1920 , 320 );
-            @include adaptive-value( margin-top , 180 , 30 , 1920 , 320 );
-            @include adaptive-value( margin-bottom , 175 , 38 , 1920 , 320 );
+            @include adaptiveValue(width , 462 , 100 );
+            @include adaptiveValue(height ,103  , 22 );
+            @include adaptiveValue(border-radius  , 51.5 , 11 );
+            @include adaptiveValue( border-width , 2 , 0.5 );
+            @include adaptiveValue( margin-top , 180 , 30 );
+            @include adaptiveValue( margin-bottom , 175 , 38 );
             
         }
     }
@@ -68,15 +68,15 @@
         text-align: center;
         letter-spacing: -2.05px;
         @media (max-width: 1920px) {
-            @include adaptive-value( font-size , 65 , 30 , 1920 , 701 );
-            @include adaptive-value( margin-bottom , 104 , 22 , 1920 , 320 );
+            @include adaptiveValue( font-size , 65 , 30 , 1920 , 701 , 1);
+            @include adaptiveValue( margin-bottom , 104 , 22);
         }
         @media (max-width: 700px) {
-            @include adaptive-value(font-size ,30 , 28, 700 , 481 );
+            @include adaptiveValue(font-size ,30 , 28, 700 , 481 , 1);
             letter-spacing: -0.75px;
         }
         @media (max-width: 480px) {
-            @include adaptive-value( font-size , 28 , 19 , 480 , 320 );
+            @include adaptiveValue( font-size , 28 , 19 , 480 , 320 , 1);
             letter-spacing: -0.66px;
         }
         @media (max-width: 320px) {
@@ -89,7 +89,7 @@
         letter-spacing: -2.05px;
         padding-right: 10px;
         @media (max-width: 1920px) {
-            @include adaptive-value( font-size , 45 , 13 , 1920 , 320 );
+            @include adaptiveValue( font-size , 45 , 13 );
         }
         @media (max-width: 700px) {
             letter-spacing: -0.75px;
@@ -120,14 +120,14 @@
     .normativ__card:nth-child(2) {
         padding-top: 340px;
         @media (max-width: 1920px) {
-            @include adaptive-value( padding-top , 340 , 64 , 1920 , 320 );
+            @include adaptiveValue( padding-top , 340 , 64 );
         }
     }
     .normativ__card:nth-child(3), 
     .normativ__card:nth-child(4) {
         padding-top: 375px;
         @media (max-width: 1920px) {
-            @include adaptive-value( padding-top , 375 , 78 , 1920 , 320 );
+            @include adaptiveValue( padding-top , 375 , 78 );
         }
 
     }
@@ -137,7 +137,7 @@
     .normativ__card:nth-child(8) {
         padding-top: 176px;
         @media (max-width: 1920px) {
-            @include adaptive-value( padding-top , 176 , 37 , 1920 , 320 );
+            @include adaptiveValue( padding-top , 176 , 37 );
         }
     }
     
@@ -147,7 +147,7 @@
     .normativ__card:nth-child(8) {
         padding-left: 41px;
         @media (max-width: 1920px) {
-            @include adaptive-value( padding-left , 41 , 9 , 1920 , 320 );
+            @include adaptiveValue( padding-left , 41 , 9 );
         }
     }
 }
@@ -166,7 +166,7 @@
     transform: translateY(-50%);
     background: linear-gradient(164deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(253, 88, 119, 0.65) 55%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
     @media (max-width: 1920px) {
-        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+        @include adaptiveValue(height ,10 ,2.04 );
     }
 }
 
@@ -178,7 +178,7 @@
     transform: translateY(-50%);
     background: linear-gradient(164deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(253, 88, 119, 0.65) 55%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
     @media (max-width: 1920px) {
-        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+        @include adaptiveValue(height ,10 ,2.04 );
     }
 }
 
@@ -190,7 +190,7 @@
     transform: translateY(-50%);
     background: linear-gradient(164deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(253, 88, 119, 0.65) 55%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
     @media (max-width: 1920px) {
-        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+        @include adaptiveValue(height ,10 ,2.04 );
     }
 }
 
@@ -202,7 +202,7 @@
     grid-column: 2; /* Указываем номер колонки */
     background: linear-gradient(74deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(253, 88, 119, 0.65) 55%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
     @media (max-width: 1920px) {
-        @include adaptive-value(width , 10 , 2.16, 1920 , 320 );
+        @include adaptiveValue(width , 10 , 2.16 );
     }
 }
 //Section normativ end
@@ -222,21 +222,21 @@
     .reglament__card:nth-child(2) {
         padding-top: 340px;
         @media (max-width: 1920px) {
-            @include adaptive-value(padding-top ,340 , 72, 1920 , 320 );
+            @include adaptiveValue(padding-top ,340 , 72 );
         }
     }
     .reglament__card:nth-child(3), 
     .reglament__card:nth-child(4) {
         height: 250px;
         @media (max-width: 1920px) {
-            @include adaptive-value(height ,250 ,54 , 1920 , 320 );
+            @include adaptiveValue(height ,250 ,54 );
         }
     }
 
     .reglament__card:nth-child(2) {
         padding-left: 41px;
         @media (max-width: 1920px) {
-            @include adaptive-value( padding-left , 41 , 9 , 1920 , 320 );
+            @include adaptiveValue( padding-left , 41 , 9 );
         }
     }
 }
@@ -263,7 +263,7 @@
     rgba(255, 88, 101, 0.23) 91%,
     rgba(255, 89, 91, 0.21) 100%);
     @media (max-width: 1920px) {
-        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+        @include adaptiveValue(height ,10 ,2.04 );
     }
 }
 
@@ -284,7 +284,7 @@
     rgba(255, 88, 101, 0.23) 91%, 
     rgba(255, 89, 91, 0.21) 100%);
     @media (max-width: 1920px) {
-        @include adaptive-value(width , 10 , 2.16, 1920 , 320 );
+        @include adaptiveValue(width , 10 , 2.16 );
     }
 }
 //Section reglament end
@@ -304,14 +304,14 @@
     .standarts__card:nth-child(2) {
         padding-top: 340px;
         @media (max-width: 1920px) {
-            @include adaptive-value( padding-top , 340 , 64 , 1920 , 320 );
+            @include adaptiveValue( padding-top , 340 , 64 );
         }
     }
     .standarts__card:nth-child(3), 
     .standarts__card:nth-child(4) {
         padding-top: 375px;
         @media (max-width: 1920px) {
-            @include adaptive-value( padding-top , 375 , 78 , 1920 , 320 );
+            @include adaptiveValue( padding-top , 375 , 78 );
         }
     }
     .standarts__card:nth-child(5), 
@@ -322,7 +322,7 @@
      {
         padding-top: 176px;
         @media (max-width: 1920px) {
-            @include adaptive-value( padding-top , 176 , 37 , 1920 , 320 );
+            @include adaptiveValue( padding-top , 176 , 37 );
         }
     }
     
@@ -332,7 +332,7 @@
     .standarts__card:nth-child(8) {
         padding-left: 41px;
         @media (max-width: 1920px) {
-            @include adaptive-value( padding-left , 41 , 9 , 1920 , 320 );
+            @include adaptiveValue( padding-left , 41 , 9 );
         }
     }
 }
@@ -359,7 +359,7 @@
     rgba(255, 88, 101, 0.23) 91%,
     rgba(255, 89, 91, 0.21) 100%);
     @media (max-width: 1920px) {
-        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+        @include adaptiveValue(height ,10 ,2.04 );
     }
 }
 
@@ -379,7 +379,7 @@
     rgba(255, 88, 101, 0.23) 91%,
     rgba(255, 89, 91, 0.21) 100%);
     @media (max-width: 1920px) {
-        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+        @include adaptiveValue(height ,10 ,2.04 );
     }
 }
 
@@ -399,7 +399,7 @@
     rgba(255, 88, 101, 0.23) 91%,
     rgba(255, 89, 91, 0.21) 100%);
     @media (max-width: 1920px) {
-        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+        @include adaptiveValue(height ,10 ,2.04 );
     }
 }
 
@@ -419,7 +419,7 @@
     rgba(255, 88, 101, 0.23) 91%,
     rgba(255, 89, 91, 0.21) 100%);
     @media (max-width: 1920px) {
-        @include adaptive-value(height ,10 ,2.04 , 1920 , 320 );
+        @include adaptiveValue(height ,10 ,2.04 );
     }
 }
 
@@ -440,7 +440,7 @@
     rgba(255, 88, 101, 0.23) 91%, 
     rgba(255, 89, 91, 0.21) 100%);
     @media (max-width: 1920px) {
-        @include adaptive-value(width , 10 , 2.16, 1920 , 320 );
+        @include adaptiveValue(width , 10 , 2.16 );
     }
 }
 //Section standart end

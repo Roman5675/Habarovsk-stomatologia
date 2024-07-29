@@ -1,8 +1,4 @@
-@mixin adaptive-value($property, $startSize ,$minSize, $maxWidth, $minWidth) {
-    $addSize: $startSize - $minSize;
-    $addWidth: $maxWidth - $minWidth;
-    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$addWidth}));
-}
+//AdaptiveValue Start
 
 //Percent
 @function percent($px, $from) {
@@ -93,3 +89,5 @@ $maxWidth: 1920;
 		}
 	}
 }
+
+//AdaptiveValue End

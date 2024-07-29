@@ -18,6 +18,6 @@
     margin-inline: auto; //Центрирование контейнера
     padding-inline: 261px;
     @media (max-width: 1920px) {
-        @include adaptive-value( padding-inline ,261,7.9,1920,320 );
+        @include adaptiveValue( padding-inline , 261 , 7.9 );
     }
 }

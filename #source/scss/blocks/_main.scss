@@ -35,7 +35,7 @@
     justify-content: center;
     align-items: center;
     font-size: 22px;
-    letter-spacing: -1.71px;
+    letter-spacing: -2.61px;
     width: 240px;
     height: 67px;
     border-radius: 33px;
@@ -47,11 +47,11 @@
         background: var(--hover-button-color);
     }
     @media (max-width: 1920px) {
-        @include adaptive-value(width , 240 , 102 , 1920 , 320 );
-        @include adaptive-value(height ,67  , 29 , 1920 , 320 );
-        @include adaptive-value(border-radius  , 33 , 14 , 1920 , 320 );
-        @include adaptive-value( font-size , 22 , 12 , 1920 , 320 );
-        @include adaptive-value( letter-spacing , -2.61 , -0.73, 1920 , 320 );
+        @include adaptiveValue(width , 240 , 102 );
+        @include adaptiveValue(height ,67  , 29 );
+        @include adaptiveValue(border-radius  , 33 , 14 );
+        @include adaptiveValue( font-size , 22 , 12 );
+        @include adaptiveValue( letter-spacing , -2.61 , -0.73 );
     }
 }
 //секция signup end
@@ -86,7 +86,7 @@
     height: 29px;        /* Высота буллета */
     opacity: 1;         /* Убедитесь, что буллет не полупрозрачный */
     transition: background-color 0.3s, border-color 0.3s; /* Плавный переход */
-    @include adaptiveValue(  width , 29 , 17 );
+    @include adaptiveValue( width , 29 , 17 );
     @include adaptiveValue( height , 29 , 17 );
 }
 
@@ -188,11 +188,11 @@
         
     }
     @media (max-width: 1920px) {
-        @include adaptive-value(height , 66 , 22 , 1920 , 320 );
-        @include adaptive-value(border-radius  , 33 , 11 , 1920 , 320 );
-        @include adaptive-value( border-width , 2 , 0.5 , 1920 , 320 );
-        @include adaptive-value( font-size , 30 , 12 , 1920 , 320 );
-        @include adaptive-value( letter-spacing , -2.61 , -0.57, 1920 , 320 );
+        @include adaptiveValue(height , 66 , 22 );
+        @include adaptiveValue(border-radius  , 33 , 11 );
+        @include adaptiveValue( border-width , 2 , 0.5 );
+        @include adaptiveValue( font-size , 30 , 12 );
+        @include adaptiveValue( letter-spacing , -2.61 , -0.57 );
     }
 }
 //Advantage end
@@ -250,6 +250,7 @@
     border-width: 2px;
     border-style: solid;
     background-color: transparent;
+    letter-spacing: -2.61px;
     p {
         font-size: 26px;
         letter-spacing: -1.71px;
@@ -261,14 +262,10 @@
     &:hover {
         background: var(--hover-button-color);
     }
-    @media (max-width: 1920px) {
-        @include adaptive-value(height , 88 , 26 , 1920 , 320 );
-        @include adaptiveValue( width , 370 , 109 );
-        @include adaptive-value(border-radius  , 33 , 13 , 1920 , 320 );
-        @include adaptive-value( border-width , 2 , 0.5 , 1920 , 320 );
-        @include adaptive-value( font-size , 30 , 12 , 1920 , 320 );
-        @include adaptive-value( letter-spacing , -2.61 , -0.57, 1920 , 320 );
-    }
+    @include adaptiveValue( height , 88 , 26 );
+    @include adaptiveValue( width , 370 , 109 );
+    @include adaptiveValue( border-radius , 44 , 13 );
+    @include adaptiveValue( border-width , 2 , 0.5 );
 }
 .installment__right-row {
     display: flex;
@@ -377,10 +374,10 @@
         background: var(--hover-button-color);
     }
     @media (max-width: 1920px) {
-        @include adaptive-value(height , 53 , 21 , 1920 , 320 );
+        @include adaptiveValue(height , 53 , 21 );
         
-        @include adaptive-value(border-radius  , 25 , 10 , 1920 , 320 );
-        @include adaptive-value( border-width , 0.74 , 0.3 , 1920 , 320 );
+        @include adaptiveValue(border-radius  , 25 , 10 );
+        @include adaptiveValue( border-width , 0.74 , 0.3 );
     }
 }
 //Services end
@@ -478,10 +475,10 @@
         background: var(--hover-button-color);
     }
     @media (max-width: 1920px) {
-        @include adaptive-value(height , 67 , 25 , 1920 , 320 );
+        @include adaptiveValue(height , 67 , 25 );
         @include adaptiveValue( width , 236 , 89 );
-        @include adaptive-value(border-radius  , 33.5 , 10 , 1920 , 320 );
-        @include adaptive-value( border-width , 2 , 0.5 , 1920 , 320 );
+        @include adaptiveValue(border-radius  , 33.5 , 10 );
+        @include adaptiveValue( border-width , 2 , 0.5 );
     }
 }
 //Meet end
