@@ -113,6 +113,9 @@
     margin-bottom: 93px;
     @include adaptiveValue( font-size , 58 , 15 );
     @include adaptiveValue( margin-bottom , 93 , 18 );
+    @media (max-width: 480px) {
+        letter-spacing: -0.62px;
+    }
 
 }
 .advantage__items {
@@ -132,6 +135,9 @@
     font-weight: 500;
     letter-spacing: -1.29px;
     @include adaptiveValue( font-size , 32 , 14 );
+    @media (max-width: 480px) {
+        letter-spacing: -0.63px;
+    }
     @media (max-width: 320px) {
         letter-spacing: -0.43px;
     }
@@ -178,6 +184,9 @@
         @include adaptiveValue( padding-left , 74 , 12 );
         @include adaptiveValue( padding-right , 74 , 12 );
         @include adaptiveValue( font-size , 20 , 11 );
+        @media (max-width: 480px) {
+            letter-spacing: -0.84px;
+        }
         @media (max-width: 320px) {
             letter-spacing: -0.56px;
         }
@@ -255,6 +264,9 @@
         font-size: 26px;
         letter-spacing: -1.71px;
         @include adaptiveValue( font-size , 26 , 11 );
+        @media (max-width: 480px) {
+            letter-spacing: -0.98px;
+        }
         @media (max-width: 320px) {
             letter-spacing: -0.56px;
         }
@@ -339,6 +351,7 @@
         @include adaptiveValue( width , 168 , 115 , 480 , 320 );
     }
 }
+
 .services__title {
     font-size: 24px;
     font-weight: 500;
@@ -366,6 +379,9 @@
         font-size: 20px;
         letter-spacing: -1.71px;
         @include adaptiveValue( font-size , 20 , 11 );
+        @media (max-width: 480px) {
+            letter-spacing: -0.7px;
+        }
         @media (max-width: 320px) {
             letter-spacing: -0.56px;
         }
@@ -465,8 +481,11 @@
     border-style: solid;
     .meet__button-text {
         font-size: 20px;
-        letter-spacing: -1.71px;
+        letter-spacing: -1.44px;
         @include adaptiveValue( font-size , 20 , 11 );
+        @media (max-width: 480px) {
+            letter-spacing: -0.69px;
+        }
         @media (max-width: 320px) {
             letter-spacing: -0.56px;
         }

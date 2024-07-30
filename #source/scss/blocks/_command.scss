@@ -129,20 +129,19 @@
     margin-bottom: 80px;
     padding-left: 24px;
     @media (max-width: 1920px) {
-        @include adaptiveValue( font-size , 47 , 17 , 1920 , 701 , 1);
-        @include adaptiveValue( margin-bottom , 80 , 38 );
+        @include adaptiveValue( font-size , 47 , 17 , 1920 , 700 , 1);
+        @include adaptiveValue( margin-bottom , 80 , 29 , 1920 , 700 , 1 );
         @include adaptiveValue( padding-left , 24 , 11 );
     }
     @media (max-width: 700px) {
-        font-size: 17px;
         letter-spacing: -0.57px;
     }
     @media (max-width: 480px) {
-        font-size: 35px;
+        @include adaptiveValue( margin-bottom , 55 , 47 , 480 , 320 , 1 );
+        @include adaptiveValue( font-size , 35 , 17 , 480 , 320 , 1);
         letter-spacing: -1.11px;
     }
     @media (max-width: 320px) {
-        font-size: 23px;
         letter-spacing: -0.75px;
     }
 }
@@ -152,11 +151,15 @@
     gap: 38px;
     padding-left: 31px;
     padding-bottom: 65px;
+    padding-right: 27px;
     @media (max-width: 1920px) {
         @include adaptiveValue(padding-left ,31 ,11 );
-        @media (max-width: 1920px) {
         @include adaptiveValue(padding-bottom ,65 , 42 );
-        }
+        @include adaptiveValue(padding-right ,27 , 9 , 1920 , 700 ,1);
+        @include adaptiveValue(gap ,38 , 14 , 1920 , 700, 1 );
+    }
+    @media (max-width: 480px) {
+        @include adaptiveValue(gap , 45 , 30 , 480 , 320, 1 );
     }
 }
 
@@ -164,24 +167,24 @@
     font-size: 32px;
     font-weight: 500;
     letter-spacing: -2.09px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( font-size, 32 , 13);
+    @include adaptiveValue( letter-spacing, -2.09 , -0.76, 1920 , 700, 1);
+    @include adaptiveValue( font-size, 32 , 12, 1920 , 700, 1);
 
-
-    }
     @media (max-width: 700px) {
         letter-spacing: -0.76px;
     }
     @media (max-width: 480px) {
-        letter-spacing: -1.49px;
+        @include adaptiveValue( font-size, 20 , 12, 480 , 320 , 1);
+        letter-spacing: -0.7px;
     }
     @media (max-width: 320px) {
-        letter-spacing: -1.02px;
+        letter-spacing: -0.5px;
     }
 }
 
 .doctors__subtitle-number {
     font-size: 55px;
+    font-weight: 500;
     @media (max-width: 1920px) {
         @include adaptiveValue(font-size ,55 ,27 );
     }
@@ -207,6 +210,31 @@
     color: #2e2e2e;
     font-size: 40px;
     @include adaptiveValue( font-size , 40 , 20 );
+}
+
+.doctors__subtitle-first-row {
+    display: flex;
+    align-items: center;
+    .doctors__subtitle-number {
+        margin-right: 3px;
+    }
+}
+
+.doctors__subtitle-second-row {
+    display: flex;
+    align-items: center;
+    .doctors__subtitle-number {
+        margin-right: 30px;
+        @include adaptiveValue( margin-right , 30 , 10 , 1920 , 320 , 1 );
+    }
+}
+
+.doctors__subtitle-image-container {
+    margin-right: 9px;
+}
+
+.doctors__subtitle-image {
+    @include adaptiveValue( width , 48 , 25 , 1920 , 320 , 1 );
 }
 
 //Section doctors end

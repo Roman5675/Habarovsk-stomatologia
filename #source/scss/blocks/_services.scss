@@ -139,6 +139,9 @@
     @media (max-width: 1920px) {
         @include adaptiveValue( font-size ,37 ,11 );
     }
+    @media (max-width: 700px) {
+        letter-spacing: -0.46px;
+    }
     @media (max-width: 320px) {
         letter-spacing: -0.28px
     }
