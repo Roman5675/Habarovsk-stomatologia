@@ -277,7 +277,7 @@
     @include adaptiveValue( height , 88 , 26 );
     @include adaptiveValue( width , 370 , 109 );
     @include adaptiveValue( border-radius , 44 , 13 );
-    @include adaptiveValue( border-width , 2 , 0.5 );
+    @include adaptiveValue( border-width , 2 , 0.38 );
 }
 .installment__right-row {
     display: flex;

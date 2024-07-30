@@ -1374,14 +1374,14 @@ body._lock {
     border-radius: calc(0.8125rem + 1.9375 * (100vw - 20rem) / 100);
   }
 }
-@supports (border-width: clamp( 0.03125rem , 0.0125rem  +  0.09375vw , 0.125rem )) {
+@supports (border-width: clamp( 0.02375rem , 0.0035rem  +  0.10125vw , 0.125rem )) {
   .installment__button {
-    border-width: clamp( 0.03125rem , 0.0125rem  +  0.09375vw , 0.125rem );
+    border-width: clamp( 0.02375rem , 0.0035rem  +  0.10125vw , 0.125rem );
   }
 }
-@supports not (border-width: clamp( 0.03125rem , 0.0125rem  +  0.09375vw , 0.125rem )) {
+@supports not (border-width: clamp( 0.02375rem , 0.0035rem  +  0.10125vw , 0.125rem )) {
   .installment__button {
-    border-width: calc(0.03125rem + 0.09375 * (100vw - 20rem) / 100);
+    border-width: calc(0.02375rem + 0.10125 * (100vw - 20rem) / 100);
   }
 }
 
