@@ -2,6 +2,10 @@
 .footer__column {
     display: flex;
     flex-direction: column;
+    padding-bottom: 77px;
+    @media (max-width: 1920px) {
+        @include adaptiveValue( padding-bottom , 77 , 20 );
+    }
 }
 .footer__top {
     display: flex;
@@ -55,10 +59,6 @@
 .footer__list-bottom {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 181px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( margin-bottom , 181 , 41 );
-    }
     @media (max-width: 699px) {
         display: none;
     }
