@@ -150,8 +150,9 @@
 
 .services-cards__logo {
     height: 259px;
+    width: auto;
     @media (max-width: 1920px) {
-        @include adaptiveValue( height, 259,57 );
+        @include adaptiveValue( height , 259 , 56 );
     }
 }
 //Section services-cards end
