@@ -1,6 +1,5 @@
 //Section welcome start
 .welcome {
-    margin-top: 66px;
     @include adaptiveValue( margin-top , 66 , 30 );
 }
 
@@ -17,16 +16,15 @@
 }
 .welcome__title {
     font-family: var(--roboto-condensed);
-    font-size: 48px;
     letter-spacing: -2.01px;
     max-width: 680px;
     text-align: left;
     span {
         font-weight: 700
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue(font-size ,48 ,12 );
-    }
+    
+    @include adaptiveValue(font-size ,48 ,12 );
+    
     @media (max-width: 700px) {
         letter-spacing: -0.74px;
     }
@@ -36,21 +34,14 @@
     }
 }
 .welcome__link {
-    font-size: 46px;
     position: absolute;
     left: 0px;
     bottom: 0px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    letter-spacing: -2.56px;
-    width: 358px;
-    height: 102px;
-    border-radius: 51px;
     background: linear-gradient(white, white) padding-box, 
-                    linear-gradient(90deg, #f857a6, #923362) border-box;
-    border-width: 2px;
+                linear-gradient(90deg, #f857a6, #923362) border-box;
     border-style: solid;
     border-color: transparent;
     p {
@@ -64,14 +55,14 @@
     &:hover {
         background: var(--hover-button-color);
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue(width , 358 , 79 );
-        @include adaptiveValue(height ,103  , 23 );
-        @include adaptiveValue(border-radius  , 51 , 11 );
-        @include adaptiveValue( border-width , 2 , 0.5 );
-        @include adaptiveValue( font-size , 46 , 12 );
-        @include adaptiveValue( letter-spacing , -2.61 , -0.57 );
-    }
+    
+    @include adaptiveValue(width , 358 , 79 );
+    @include adaptiveValue(height ,103 , 23 );
+    @include adaptiveValue(border-radius , 51 , 11 );
+    @include adaptiveValue( border-width , 2 , 0.5 );
+    @include adaptiveValue( font-size , 46 , 12 );
+    @include adaptiveValue( letter-spacing , -2.61 , -0.57 );
+    
 }
 .welcome__image {
     min-width: 158px;
@@ -86,8 +77,6 @@
 .doctors__cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 126px;
-    row-gap: 218px;
     @media (max-width: 1920px) {
         @include adaptiveValue(column-gap ,126 ,42 , 1920 , 481 , 1 );
         @include adaptiveValue( row-gap , 218 , 80 , 1920 , 481 , 1 );
@@ -107,7 +96,6 @@
     border-radius: 50px;
     position: relative; /* необходим для корректной работы box-shadow */
     box-shadow: 0 0 20px rgba(235, 69, 146, 0.5);
-    margin-bottom: 75px;
     @include adaptiveValue( margin-bottom , 75 , 35 );
 }
 
@@ -124,15 +112,11 @@
 }
 .doctors__title {
     font-family: var(--roboto-condensed);
-    font-size: 47px;
     letter-spacing: -1.55px;
-    margin-bottom: 80px;
-    padding-left: 24px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( font-size , 47 , 17 , 1920 , 700 , 1);
-        @include adaptiveValue( margin-bottom , 80 , 29 , 1920 , 700 , 1 );
-        @include adaptiveValue( padding-left , 24 , 11 );
-    }
+    @include adaptiveValue( font-size , 47 , 17 , 1920 , 700 , 1);
+    @include adaptiveValue( margin-bottom , 80 , 29 , 1920 , 700 , 1 );
+    @include adaptiveValue( padding-left , 24 , 11 );
+
     @media (max-width: 700px) {
         letter-spacing: -0.57px;
     }
@@ -148,25 +132,17 @@
 .doctors__subtitle {
     display: flex;
     flex-direction: column;
-    gap: 38px;
-    padding-left: 31px;
-    padding-bottom: 65px;
-    padding-right: 27px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(padding-left ,31 ,11 );
-        @include adaptiveValue(padding-bottom ,65 , 42 );
-        @include adaptiveValue(padding-right ,27 , 9 , 1920 , 700 ,1);
-        @include adaptiveValue(gap ,38 , 14 , 1920 , 700, 1 );
-    }
+    @include adaptiveValue(padding-left ,31 ,11 );
+    @include adaptiveValue(padding-bottom ,65 , 42 );
+    @include adaptiveValue(padding-right ,27 , 9 , 1920 , 700 ,1);
+    @include adaptiveValue(gap ,38 , 14 , 1920 , 700, 1 );
     @media (max-width: 480px) {
         @include adaptiveValue(gap , 45 , 30 , 480 , 320, 1 );
     }
 }
 
 .doctors__subtitle-font {
-    font-size: 32px;
     font-weight: 500;
-    letter-spacing: -2.09px;
     @include adaptiveValue( letter-spacing, -2.09 , -0.76, 1920 , 700, 1);
     @include adaptiveValue( font-size, 32 , 12, 1920 , 700, 1);
 
@@ -183,11 +159,8 @@
 }
 
 .doctors__subtitle-number {
-    font-size: 55px;
     font-weight: 500;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(font-size ,55 ,27 );
-    }
+    @include adaptiveValue(font-size ,55 ,27 );
 }
 
 .doctors__card-button {
@@ -195,9 +168,6 @@
     justify-content: center;
     align-items: center;
     background: linear-gradient(126deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(252, 88, 134, 0.83) 42.57%, rgba(253, 88, 119, 0.65) 59.9%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    height: 129px;
     &:hover {
         background: var(--hover-button-color);
     }
@@ -208,7 +178,6 @@
 .doctors__card-button-text {
     font-family: var(--sf-pro-display);
     color: #2e2e2e;
-    font-size: 40px;
     @include adaptiveValue( font-size , 40 , 20 );
 }
 
@@ -224,7 +193,6 @@
     display: flex;
     align-items: center;
     .doctors__subtitle-number {
-        margin-right: 30px;
         @include adaptiveValue( margin-right , 30 , 10 , 1920 , 320 , 1 );
     }
 }
@@ -236,5 +204,4 @@
 .doctors__subtitle-image {
     @include adaptiveValue( width , 48 , 25 , 1920 , 320 , 1 );
 }
-
 //Section doctors end

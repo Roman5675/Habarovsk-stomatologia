@@ -1,11 +1,9 @@
 //Section enum start
 .enum {
-    margin-top: 66px;
     @include adaptiveValue( margin-top , 66 , 48 );
 }
 
-.enum__discount {
-    
+.enum__discount {  
     background: linear-gradient(270deg, #c01769 0%, #923362 100%);
     background-clip: text;
     color: transparent;
@@ -15,8 +13,6 @@
 
 .enum__vertical-line {
     position: absolute;
-    height: 10px;
-    width: 2373px;
     background: linear-gradient(157deg, 
     #F958A1 0%, 
     rgba(251, 88, 141, 0.98) 10%,
@@ -29,16 +25,12 @@
     transform-origin: right top;
     transform: rotate(-90deg);
     top: 0px;
-    right: 5px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(height , 10 , 2.16 );
-        @include adaptiveValue(width , 2373 , 521);
-        @include adaptiveValue(right, 5 , 2 );
-    }
+    @include adaptiveValue(height , 10 , 2.16 );
+    @include adaptiveValue(width , 2373 , 521);
+    @include adaptiveValue(right , 5 , 2 );
 }
 .enum__horizontal-line{
     position: absolute;
-    height: 10px;
     width: 100%;
     background: linear-gradient(to bottom right, 
     rgba(249, 88, 161, 1) 0%,
@@ -52,42 +44,28 @@
     );
     bottom: 0px;
     right: 0px;
-    @media (max-width: 1920px) {
     @include adaptiveValue(height ,10 ,2.04 );
-    }
 }
 
 .enum__column {
     display: flex;
     flex-direction: column;
     position: relative;
-    
 }
 
 .enum__title-text {
     font-family: var(--roboto-condensed);
     color: #727272;
-    font-size: 70px;
     letter-spacing: -2.06px;
-    margin-top: 96px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( font-size , 70 , 19 );
-        @include adaptiveValue( margin-top , 96 , 21 );
-        
-    }
+    @include adaptiveValue( font-size , 70 , 19 );
+    @include adaptiveValue( margin-top , 96 , 21 );
 }
 
 .enum__subtitle {
     font-family: var(--roboto-condensed);
     color: #727272;
-    font-size: 38px;
-    letter-spacing: -2.06px;
-    
-    @media (max-width: 1920px) {
-        @include adaptiveValue( font-size ,38,11 );
-        @include adaptiveValue(  letter-spacing , -2.06 , -0.45 );
-        
-    }
+    @include adaptiveValue( font-size ,38,11 );
+    @include adaptiveValue(  letter-spacing , -2.06 , -0.45 );
 }
 
 .enum__first-row {
@@ -97,35 +75,22 @@
 }
 .enum__first-row-left {
     width: 50%;
-    height: 788px;
     position: relative;
     h2{
         margin-bottom: 16%;
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue( height, 788, 171 );
-    }
-    
+    @include adaptiveValue( height, 788, 171 );
 }
 
 .enum__first-row-right {
     width: 50%;
-    height: 788px;
-    h2{
-        margin-bottom: 50px;
-        @media (max-width: 1920px) {
-            @include adaptiveValue(margin-bottom ,50 ,10 );
-        }
+    h2 {
+        @include adaptiveValue(margin-bottom ,50 ,10 );
     }
     .enum__subtitle{
-        margin-bottom: 105px;
-        @media (max-width: 1920px) {
-            @include adaptiveValue(margin-bottom ,105 ,9.5 );
-        }
+        @include adaptiveValue(margin-bottom ,105 ,9.5 );
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue( height, 788, 171 );
-    }
+    @include adaptiveValue( height, 788, 171 );
 }
 
 .enum__second-row {
@@ -134,115 +99,63 @@
 }
 .enum__second-row-left {
     width: 50%;
-    height: 818px;
     h2{
-        margin-bottom: 108px;
-        @media (max-width: 1920px) {
-            @include adaptiveValue( margin-bottom, 108,23.6 );
-        }
+        @include adaptiveValue( margin-bottom, 108,28 );
     }
     p{
-        margin-bottom: 132px;
-        @media (max-width: 1920px) {
-            @include adaptiveValue(margin-bottom ,132 ,28 );
-        }
+        @include adaptiveValue(margin-bottom ,120 ,28 );
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue( height, 818, 178 );
-    }
+    @include adaptiveValue( height, 818, 178 );
 }
 .enum__second-row-right {
     width: 50%;
-    height: 818px;
     h2{
-        margin-bottom: 108px;
-        @media (max-width: 1920px) {
-            @include adaptiveValue(margin-bottom ,108 , 30 );
-        }
-        
+        @include adaptiveValue(margin-bottom ,108 , 28 );
     }
     p{
-        margin-bottom: 103px;
-        @media (max-width: 1920px) {
-            @include adaptiveValue(margin-bottom ,103 ,22 );
-        }
+        @include adaptiveValue(margin-bottom ,120 ,28 );
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue( height, 818, 178 );
-    }
+    @include adaptiveValue( height, 818, 178 );
 }
 .enum__third-row {
     display: flex;
     position: relative;
-    margin-bottom: 150px;
     .enum__horizontal-line{
-        top: 497px;
-        @media (max-width: 1920px) {
-            @include adaptiveValue(top ,497 ,100 );
-        }
+        @include adaptiveValue(top ,497 ,100 );
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue(margin-bottom ,150 ,32 );
-    }
+    @include adaptiveValue(margin-bottom ,150 ,32 );
 }
 .enum__third-row-left {
     width: 50%;
-    height: 767px;
     h2{
-        margin-bottom: 108px;
-        @media (max-width: 1920px) {
-            @include adaptiveValue(margin-bottom , 108 ,23.6 );
-        }
+        @include adaptiveValue(margin-bottom , 108 ,23.6 );
     }
     p{
-        margin-bottom: 280px;
-        @media (max-width: 1920px) {
-            @include adaptiveValue( margin-bottom,280 ,52 );
-        }
+        @include adaptiveValue( margin-bottom,280 ,52 );
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue(height ,767 , 167 );
-    }
+    @include adaptiveValue(height ,767 , 167 );
 }
 .enum__third-row-right {
     width: 50%;
-    height: 767px;
     h2{
-        margin-bottom: 108px;
-        @media (max-width: 1920px) {
-            @include adaptiveValue(margin-bottom , 108 ,17 );
-        }
+        @include adaptiveValue(margin-bottom , 108 ,17 );
     }
     p{
-        margin-bottom: 280px;
-        @media (max-width: 1920px) {
-            @include adaptiveValue( margin-bottom,280 ,52 );
-        }
+        @include adaptiveValue( margin-bottom,280 ,52 );
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue(height ,767 , 167 );
-    }
+    @include adaptiveValue(height ,767 , 167 );
 }
 
 .enum__margin-left{
-    margin-left: 42px;
-    @media (max-width: 1920px) {
     @include adaptiveValue( margin-left,42 , 9 );
-    }
 }
 
 .enum__button {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    letter-spacing: -2.61px;
-    width: 462px;
-    height: 103px;
-    border-radius: 51.5px;
     background: linear-gradient(white, white) padding-box, 
                 linear-gradient(90deg, #f857a6, #923362) border-box;
-    border-width: 2px;
     border-style: solid;
     border-color: transparent;
     p {
@@ -256,14 +169,12 @@
     &:hover {
         background: var(--hover-button-color);
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue(width , 462 , 100 );
-        @include adaptiveValue(height ,103  , 22 );
-        @include adaptiveValue(border-radius  , 51.5 , 11 );
-        @include adaptiveValue( border-width , 2 , 0.5 );
-        @include adaptiveValue( font-size , 30 , 12 );
-        @include adaptiveValue( letter-spacing , -2.61 , -0.57 );
-    }
+    @include adaptiveValue(width , 462 , 100 );
+    @include adaptiveValue(height ,103 , 22 );
+    @include adaptiveValue(border-radius , 51.5 , 11 );
+    @include adaptiveValue( border-width , 2 , 0.5 );
+    @include adaptiveValue( font-size , 30 , 12 );
+    @include adaptiveValue( letter-spacing , -2.61 , -0.57 );
 }
 //Section enum end
 
@@ -273,28 +184,18 @@
 }
 
 .map {
-    width: 1398px;
-    height: 1535px;
     margin-bottom: 130px;
-    @media (max-width: 1920px) {
     @include adaptiveValue(height ,1535 , 333 );
     @include adaptiveValue(width  , 1398 , 304 );
-    }
 }
 
 .location__button {
     position: absolute;
-    bottom: 92px;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    letter-spacing: -2.61px;
-    width: 462px;
-    height: 103px;
-    border-radius: 51.5px;
     background-color: #727272;
     p {
         color: #FFFFFF;
@@ -302,13 +203,11 @@
     &:hover {
         background: var(--hover-button-color);
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue(bottom ,92 ,22 );
-        @include adaptiveValue(width , 462 , 100 );
-        @include adaptiveValue(height ,103  , 22 );
-        @include adaptiveValue(border-radius  , 51.5 , 11 );
-        @include adaptiveValue( font-size , 30 , 12 , 1920 , 320 );
-        @include adaptiveValue( letter-spacing , -2.61 , -0.57 );
-    }
+    @include adaptiveValue(bottom ,92 ,22 );
+    @include adaptiveValue(width , 462 , 100 );
+    @include adaptiveValue(height ,103 , 22 );
+    @include adaptiveValue(border-radius , 51.5 , 11 );
+    @include adaptiveValue( font-size , 30 , 12 , 1920 , 320 );
+    @include adaptiveValue( letter-spacing , -2.61 , -0.57 );
 }
 //Section location end

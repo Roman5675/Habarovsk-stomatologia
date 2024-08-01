@@ -2,10 +2,7 @@
 .footer__column {
     display: flex;
     flex-direction: column;
-    padding-bottom: 77px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( padding-bottom , 77 , 20 );
-    }
+    @include adaptiveValue( padding-bottom , 77 , 20 );
 }
 .footer__top {
     display: flex;
@@ -17,42 +14,26 @@
     justify-content: space-between;
     align-items: center;
     img {
-        max-width: 98px;
-        @media (max-width: 1920px) {
-            @include adaptiveValue(max-width ,98 , 37 );
-        }
+        @include adaptiveValue(max-width ,98 , 37 );
     }
 }
 
 .footer__top-subtitle {
-    font-size: 32px;
     letter-spacing: -0.65px;
-    margin-bottom: 26px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(font-size ,32 , 8.11 );
-        @include adaptiveValue( letter-spacing , -0.65 , -0.68 );
-        @include adaptiveValue( margin-bottom , 26 , 10.53 );
-    }
+    @include adaptiveValue(font-size ,32 , 8.11 );
+    @include adaptiveValue( margin-bottom , 26 , 10.53 );
 }
 .footer__top-title {
-    font-size: 98px;
     font-weight: 500;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(font-size , 98, 24.5 );
-    }
+    @include adaptiveValue(font-size , 98, 24.5 );
 }
 
 .footer__top-line {
     width: auto;
-    height: 1.94px;
     background-color: #000000;
-    margin-top: 29px;
-    margin-bottom: 70px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(margin-top ,29 ,38 );
-        @include adaptiveValue( margin-bottom , 70 , 22 );
-        @include adaptiveValue( height , 1.94 , 1.31 );
-    }
+    @include adaptiveValue(margin-top ,29 ,38 );
+    @include adaptiveValue(margin-bottom , 70 , 22 );
+    @include adaptiveValue(height , 1.94 , 1.31 );
 }
 
 
@@ -75,10 +56,7 @@
 .footer__list-bottom-first-row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 42px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(margin-bottom ,42 ,28 , 699 , 320 , 1);
-    }
+    @include adaptiveValue(margin-bottom ,42 ,28 , 699 , 320 , 1);
 }
 
 .footer__list-bottom-second-row {
@@ -87,12 +65,8 @@
 }
 
 .footer__text {
-    font-size: 22px;
-    letter-spacing: -1.79px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( font-size,22 ,12 , 1920 , 451 , 1);
-        @include adaptiveValue( letter-spacing ,-1.79  ,-0.65 , 1920 , 700 , 1);
-    }
+    @include adaptiveValue( font-size,22 ,12 , 1920 , 700 , 1);
+    @include adaptiveValue( letter-spacing ,-1.79  ,-0.65 , 1920 , 700 , 1);
     @media (max-width: 699px) {
         @include adaptiveValue(letter-spacing ,-1.79 ,-1.21 , 699 , 320 , 1);
         @include adaptiveValue( font-size,19 ,12 , 699 , 320 , 1);

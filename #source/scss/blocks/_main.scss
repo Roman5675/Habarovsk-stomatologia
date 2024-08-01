@@ -1,9 +1,7 @@
 //секция signup start
 
 .signup {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    @include adaptiveValue( margin-top , 60 , 9 );
+    @include adaptiveValue( margin-top , 60 , 9);
     @include adaptiveValue( margin-bottom , 60 , 23 );
 }
 .signup__row {
@@ -13,19 +11,15 @@
 }
 
 .signup__title {
-    font-size: 40px;
     font-weight: 700;
     text-align: center;
     max-width: 1188px;
-    margin-bottom: 75px;
     @include adaptiveValue( font-size , 40 , 13 );
     @include adaptiveValue( margin-bottom , 75 , 20 );
 }
-.signupsubtitle {
-    font-size: 22px;
+.signup__subtitle {
     text-align: center;
     max-width: 800px;
-    margin-bottom: 40px;
     @include adaptiveValue( font-size , 22 , 10 );
     @include adaptiveValue( margin-bottom , 40 , 23 );
 }
@@ -34,11 +28,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
-    letter-spacing: -2.61px;
-    width: 240px;
-    height: 67px;
-    border-radius: 33px;
     background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
     p {
         color: #fff;
@@ -46,13 +35,12 @@
     &:hover {
         background: var(--hover-button-color);
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue(width , 240 , 102 );
-        @include adaptiveValue(height ,67  , 29 );
-        @include adaptiveValue(border-radius  , 33 , 14 );
-        @include adaptiveValue( font-size , 22 , 12 );
-        @include adaptiveValue( letter-spacing , -2.61 , -0.73 );
-    }
+    @include adaptiveValue(width , 240 , 102 );
+    @include adaptiveValue(height ,67  , 29 );
+    @include adaptiveValue(border-radius , 33 , 14 );
+    @include adaptiveValue( font-size , 22 , 12 );
+    @include adaptiveValue( letter-spacing , -2.61 , -0.73 );
+    
 }
 //секция signup end
 
@@ -102,17 +90,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 91px;
     margin-bottom: 32px;
     @include adaptiveValue( margin-top , 91 , 32 );
 }
 .advantage__header {
-    font-size: 58px;
     font-weight: 700;
     letter-spacing: -1.71px;
-    margin-bottom: 93px;
     @include adaptiveValue( font-size , 58 , 15 );
     @include adaptiveValue( margin-bottom , 93 , 18 );
+
     @media (max-width: 480px) {
         letter-spacing: -0.62px;
     }
@@ -121,8 +107,6 @@
 .advantage__items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 54px;
-    row-gap: 100px;
     @include adaptiveValue( column-gap , 54 , 17 );
     @include adaptiveValue( row-gap , 100 , 9 );
     @media (max-width: 480px) {
@@ -131,19 +115,19 @@
 }
 
 .advantage__title {
-    font-size: 32px;
     font-weight: 500;
     letter-spacing: -1.29px;
     @include adaptiveValue( font-size , 32 , 14 );
+
     @media (max-width: 480px) {
         letter-spacing: -0.63px;
     }
+
     @media (max-width: 320px) {
         letter-spacing: -0.43px;
     }
 }
 .advantage__subtitle {
-    font-size: 20px;
     margin-bottom: 9px;
     @include adaptiveValue( font-size , 20 , 10 );
     @media (max-width: 700px) {
@@ -163,27 +147,23 @@
     justify-content: center;
     align-items: center;
     align-self: flex-start;
-    height: 66px;
-    border-radius: 33px;
     background: linear-gradient(white, white) padding-box, 
                 linear-gradient(90deg, #f857a6, #923362) border-box;
-    border-width: 2px;
     border-style: solid;
     border-color: transparent;
     margin-top: auto;
     p {
-        font-size: 20px;
         letter-spacing: -1.71px;
         background: linear-gradient(270deg, #f857a6 0%, #923362 100%);
         background-clip: text;
         color: transparent;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        padding-left: 74px;
-        padding-right: 74px;
+        
         @include adaptiveValue( padding-left , 74 , 12 );
         @include adaptiveValue( padding-right , 74 , 12 );
         @include adaptiveValue( font-size , 20 , 11 );
+
         @media (max-width: 480px) {
             letter-spacing: -0.84px;
         }
@@ -196,13 +176,10 @@
         background: var(--hover-button-color);
         
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue(height , 66 , 22 );
-        @include adaptiveValue(border-radius  , 33 , 11 );
-        @include adaptiveValue( border-width , 2 , 0.5 );
-        @include adaptiveValue( font-size , 30 , 12 );
-        @include adaptiveValue( letter-spacing , -2.61 , -0.57 );
-    }
+    
+    @include adaptiveValue(height , 66 , 22 );
+    @include adaptiveValue(border-radius , 33 , 11 );
+    @include adaptiveValue( border-width , 2 , 0.5 );
 }
 //Advantage end
 
@@ -222,29 +199,21 @@
     background: linear-gradient(126deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(252, 88, 134, 0.83) 42.57%, rgba(253, 88, 119, 0.65) 59.9%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
     opacity: 0.6;
     z-index: -1;
-    border-radius: 29px;
     @include adaptiveValue( border-radius , 29 , 9 );
 }
 .installment__row {
     display: flex;
-    gap: 150px;
-    
     @include adaptiveValue( gap , 150 , 28 );
 }
 
 .installment__left-row {
-    padding-top: 125px;
-    padding-left: 55px;
-    padding-bottom: 105px;
     @include adaptiveValue( padding-top , 125 , 75 );
     @include adaptiveValue( padding-left , 55 , 3 );
     @include adaptiveValue( padding-bottom , 105 , 79 );
 }
 
 .installment__left-row-title {
-    font-size: 76px;
     font-weight: 700;
-    margin-bottom: 325px;
     @include adaptiveValue( font-size , 76 , 22 );
     @include adaptiveValue( margin-bottom , 325 , 57 );
 }
@@ -253,15 +222,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 88px;
-    width: 370px;
-    border-radius: 44px;
-    border-width: 2px;
     border-style: solid;
     background-color: transparent;
     letter-spacing: -2.61px;
     p {
-        font-size: 26px;
         letter-spacing: -1.71px;
         @include adaptiveValue( font-size , 26 , 11 );
         @media (max-width: 480px) {
@@ -287,7 +251,6 @@
 
 .installment__right-row-title {
     font-family: var(--manifold-extended-cf);
-    font-size: 380px;
     font-weight: 300;
     @include adaptiveValue( font-size , 380 , 83 );
 }
@@ -295,7 +258,6 @@
 .installment__right-row-subtitle {
     font-family: var(--manifold-extended-cf);
     font-weight: 100;
-    font-size: 46px;
     @include adaptiveValue( font-size , 46 , 12 );
 }
 
@@ -306,18 +268,14 @@
     margin-bottom: 32px;
 }
 .services__header {
-    font-size: 58px;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 93px;
     @include adaptiveValue( font-size , 58 , 15 );
     @include adaptiveValue( margin-bottom , 93 , 23 );
 }
 .services__cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 68px;
-    row-gap: 68px;
     @include adaptiveValue( column-gap , 68 , 30 );
     @include adaptiveValue( row-gap , 68 , 40 );
     @media (max-width: 480px) {
@@ -328,12 +286,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 435px;
-    border-radius: 40px;
     position: relative; /* необходим для корректной работы box-shadow */
     box-shadow: 0 0 20px rgba(235, 69, 146, 0.5);
-    padding-top: 21px;
-    padding-bottom: 10px;
     @include adaptiveValue( height , 435 , 182 , 1920 , 700, 1 );
     @include adaptiveValue( border-radius , 40 , 10 );
     @include adaptiveValue( padding-top , 21 , 11 );
@@ -343,8 +297,6 @@
     }
 }
 .services__image {
-    width: 251px;
-    margin-bottom: 30px;
     @include adaptiveValue( width , 251 , 91 , 1920 , 700 , 1 );
     @include adaptiveValue( margin-bottom , 30 , 18 );
     @media (max-width: 480px) {
@@ -353,7 +305,6 @@
 }
 
 .services__title {
-    font-size: 24px;
     font-weight: 500;
     text-align: center;
     @include adaptiveValue( font-size , 24 , 11 , 1920 , 700 , 1 );
@@ -365,36 +316,32 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 53px;
-    border-radius: 25px;
-    border-width: 2px;
     border-style: solid;
     background-color: transparent;
     margin-top: auto;
-    padding-left: 60px;
-    padding-right: 60px;
-    @include adaptiveValue( padding-left , 60 , 11 );
-    @include adaptiveValue( padding-right , 60 , 11 );
+
     p {
-        font-size: 20px;
         letter-spacing: -1.71px;
         @include adaptiveValue( font-size , 20 , 11 );
+
         @media (max-width: 480px) {
             letter-spacing: -0.7px;
         }
+
         @media (max-width: 320px) {
             letter-spacing: -0.56px;
         }
     }
+
     &:hover {
         background: var(--hover-button-color);
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue(height , 53 , 21 );
-        
-        @include adaptiveValue(border-radius  , 25 , 10 );
-        @include adaptiveValue( border-width , 0.74 , 0.3 );
-    }
+    
+    @include adaptiveValue(height , 53 , 21 );   
+    @include adaptiveValue(border-radius  , 25 , 10 );
+    @include adaptiveValue( border-width , 0.74 , 0.3 );
+    @include adaptiveValue( padding-left , 60 , 11 );
+    @include adaptiveValue( padding-right , 60 , 11 );
 }
 //Services end
 
@@ -403,22 +350,18 @@
     margin-bottom: 32px;
 }
 .meet__header {
-    font-size: 58px;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 93px;
     @include adaptiveValue( font-size , 58 , 15 );
     @include adaptiveValue( margin-bottom , 93 , 18 );
 }
 .meet__row {
     display: flex;
     align-items: center;
-    gap: 65px;
     @include adaptiveValue( gap , 65 , 14 );
     
 }
 .meet__image {
-    width: 766px;
     @include adaptiveValue( width , 766 , 168 );
 
 }
@@ -427,8 +370,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 168px;
-    padding-bottom: 168px;
     @include adaptiveValue( padding-top , 168 , 6 );
     @include adaptiveValue( padding-bottom , 168 , 6 );
 }
@@ -443,8 +384,6 @@
     background: linear-gradient(126deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(252, 88, 134, 0.83) 42.57%, rgba(253, 88, 119, 0.65) 59.9%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
     opacity: 0.6;
     z-index: -1;
-    border-radius: 29px;
-    border-width: 13.39px; /* Толщина границы */
     border-style: solid; /* Стиль границы */
     border-color: #f4c1e1;
     @include adaptiveValue( border-radius , 29 , 9 );
@@ -452,15 +391,12 @@
 }
 
 .meet__text {
-    font-size: 30px;
     text-align: center;
-    padding-left: 22px;
-    padding-right: 25px;
-    margin-bottom: 100px;
     @include adaptiveValue( padding-left , 22 , 6 );
     @include adaptiveValue( padding-right , 25 , 6 );
     @include adaptiveValue( margin-bottom , 100 , 12 );
     @include adaptiveValue( font-size , 30 , 11 );
+
     @media (max-width: 480px) {
         font-weight: 300;
     }
@@ -472,20 +408,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 67px;
-    width: 236px;
-    border-radius: 33.5px;
-    border-width: 2px;
     border-style: solid;
     background-color: transparent;
     border-style: solid;
+
     .meet__button-text {
-        font-size: 20px;
         letter-spacing: -1.44px;
         @include adaptiveValue( font-size , 20 , 11 );
+
         @media (max-width: 480px) {
             letter-spacing: -0.69px;
         }
+        
         @media (max-width: 320px) {
             letter-spacing: -0.56px;
         }
@@ -493,12 +427,12 @@
     &:hover {
         background: var(--hover-button-color);
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue(height , 67 , 25 );
-        @include adaptiveValue( width , 236 , 89 );
-        @include adaptiveValue(border-radius  , 33.5 , 10 );
-        @include adaptiveValue( border-width , 2 , 0.5 );
-    }
+    
+    @include adaptiveValue(height , 67 , 25 );
+    @include adaptiveValue( width , 236 , 89 );
+    @include adaptiveValue(border-radius , 33.5 , 10 );
+    @include adaptiveValue( border-width , 0.82 , 0.31 );
+    
 }
 //Meet end
 
@@ -515,27 +449,26 @@
 }
 .welcome__first-row {
     display: flex;
-    gap: 8px;
-    margin-bottom: 23px;
     @include adaptiveValue( gap , 8 , 3 , 1920 , 481 , 1 );
     @include adaptiveValue( margin-bottom , 23 , 15 );
     @media (max-width: 480px) {
         flex-direction: column;
-        gap: 23px;
         @include adaptiveValue( gap , 23 , 17 , 480 , 320 , 1 );
     }
 }
 .welcome__first-row-text-left {
-    font-size: 60px;
     font-family: var(--roboto-condensed);
     letter-spacing: -1.71px;
     @include adaptiveValue( font-size , 60 , 19 );
+
     @media (max-width: 700px) {
         letter-spacing: -0.62px;
     }
+
     @media (max-width: 480px) {
         letter-spacing: -0.95px;
     }
+
     @media (max-width: 320px) {
         letter-spacing: -0.65px;
     }
@@ -547,12 +480,11 @@
 }
 
 .welcome__first-row-text-right {
-    font-size: 30px;
     font-family: var(--roboto-condensed);
     letter-spacing: -1.71px;
-    margin-bottom: 47px;
     @include adaptiveValue( font-size , 30 , 14 );
     @include adaptiveValue( margin-bottom , 47 , 14 );
+
     @media (max-width: 700px) {
         letter-spacing: -0.62px;
     }
@@ -568,15 +500,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 63px;
-    width: 243px;
-    border-radius: 29px;
     background: linear-gradient(127deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(252, 88, 134, 0.83) 42.57%, rgba(253, 88, 119, 0.65) 59.9%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
     .welcome__button-text {
-        font-size: 28px;
         color: #fff;
         letter-spacing: -1.48px;
         @include adaptiveValue( font-size , 28 , 14 );
+
         @media (max-width: 480px) {
             letter-spacing: -1.02px;
         }
@@ -587,24 +516,23 @@
     &:hover {
         background: var(--hover-button-color);
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue( height , 67 , 30 );
-        @include adaptiveValue( width , 243 , 114 );
-        @include adaptiveValue( border-radius , 29 , 13 );
-    }
+    
+    @include adaptiveValue( height , 67 , 30 );
+    @include adaptiveValue( width , 243 , 114 );
+    @include adaptiveValue( border-radius , 29 , 13 );
+    
 }
 
 .welcome__second-row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 38px;
     @include adaptiveValue( column-gap , 38 , 13 );
     @media (max-width: 480px) {
         grid-template-columns: 1fr 1fr;
         row-gap: 23px;
         .wide {
             grid-column: -1 / 1;
-           }
+        }
     }
 }
 
@@ -613,9 +541,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-top: 99px;
-    padding-bottom: 99px;
-    padding-left: 45px;
     @include adaptiveValue( padding-top , 99 , 32 );
     @include adaptiveValue( padding-bottom , 99 , 32 );
     @include adaptiveValue( padding-left , 45 , 15 );
@@ -635,7 +560,6 @@
 }
 
 .welcome__text {
-    font-size: 38px;
     font-family: var(--roboto-condensed);
     white-space: nowrap;
     letter-spacing: -2.28px;
@@ -658,10 +582,9 @@
     }
 }
 .welcome__card-title {
-    font-size: 106px;
     font-family: var(--roboto-condensed);
     white-space: nowrap;
-    @include adaptiveValue( font-size , 106 , 30 , 1920 , 480 , 1 );
+    @include adaptiveValue( font-size , 106 , 30 , 1920 , 481 , 1 );
     @media (max-width: 480px) {
         @include adaptiveValue( font-size , 52 , 36 , 480 , 320 , 1 );
     }
@@ -671,7 +594,6 @@
 }
 
 .wide {
-    padding-left: 33px;
     @include adaptiveValue( padding-left , 33 , 23 );
     @media (max-width: 480px) {
         font-size: 40px;
@@ -679,7 +601,6 @@
 
     .welcome__text {
         @media (max-width: 480px) {
-            font-size: 38px;
             letter-spacing: -2.32px;
             text-align: left;
             @include adaptiveValue( font-size , 38 , 27 , 480 , 320, 1 );
@@ -688,7 +609,6 @@
 
     .welcome__card-title {
         @media (max-width: 480px) {
-            font-size: 100px;
             text-align: left;
             @include adaptiveValue( font-size , 100 , 67 , 480 , 320 , 1);
         }

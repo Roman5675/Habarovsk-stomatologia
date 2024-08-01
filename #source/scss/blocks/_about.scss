@@ -1,7 +1,6 @@
 .content-about {
     display: flex;
     flex-direction: column;
-    gap: 70px;
     @include adaptiveValue( gap , 70 , 24 );
 }
 
@@ -11,7 +10,6 @@
 }
 
 .welcome__bottom-body {
-    padding-top: 1398px;
     @include adaptiveValue( padding-top , 1398 , 333 );
     display: flex;
     align-items: center;
@@ -49,7 +47,6 @@
 }
 
 .welcome__body-text {
-    font-size: 44px;
     @include adaptiveValue( font-size , 44 , 19 );
     max-width: 606px;
 }
@@ -73,7 +70,6 @@
 //Section intro start
 .intro__body {
     display: flex;
-    gap: 75px;
     justify-content: space-between;
     @include adaptiveValue( gap , 75 , 20 );
     @media (max-width: 700px) {
@@ -83,12 +79,7 @@
 }
 .intro__left {
     max-width: 510px;
-    padding-top: 93px;
-    padding-right: 31px;
-    padding-bottom: 114px;
-    padding-left: 10px;
     background: linear-gradient(126deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(252, 88, 134, 0.83) 42.57%, rgba(253, 88, 119, 0.65) 59.9%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
-    border-radius: 50px;
     @include adaptiveValue( padding-top , 93 , 55 );
     @include adaptiveValue( padding-right , 31 , 14 );
     @include adaptiveValue( padding-bottom , 114 , 70 );
@@ -98,7 +89,6 @@
 .intro__left-title {
     font-family: var(--roboto-slab);
     color: #727272;
-    font-size: 32px;
     margin-bottom: 44px;
     @include adaptiveValue( font-size , 32 , 19 );
     @media (max-width: 480px) {
@@ -110,7 +100,6 @@
     font-weight: 300;
     color: #727272;
     letter-spacing: -0.87px;
-    font-size: 32px;
     @include adaptiveValue( font-size , 32 , 19 );
 }
 .intro__middle {
@@ -131,41 +120,25 @@
     box-shadow: 0 0 20px rgba(235, 69, 146, 0.5);
 }
 .intro__middle-text {
-    font-size: 20px;
-    @include adaptiveValue( font-size  , 20 , 12 );
     font-family: var(--roboto-condensed);
     color: #313131;
-    margin-bottom: 55px;
-    padding-top: 52px;
-    padding-right: 23px;
-    padding-left: 18px;
     @include adaptiveValue( padding-top , 52 , 30 );
     @include adaptiveValue( padding-right , 23 , 11 );
     @include adaptiveValue( padding-left , 18 , 11 );
     @include adaptiveValue( margin-bottom , 55 , 32 );
-
+    @include adaptiveValue( font-size  , 20 , 12 );
 }
 .intro__middle-title {
-    font-size: 48px;
     font-weight: 500;
     color: #313131;
-    padding-bottom: 40px;
-    padding-left: 18px;
     @include adaptiveValue( font-size , 48 , 30 );
     @include adaptiveValue( padding-bottom , 40 , 22 );
     @include adaptiveValue( padding-left , 18 , 10 );
-
-
 }
 
 .intro__right {
     max-width: 510px;
-    border-radius: 50px;
     background: linear-gradient(126deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(252, 88, 134, 0.83) 42.57%, rgba(253, 88, 119, 0.65) 59.9%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
-    padding-top: 182px;
-    padding-right: 69px;
-    padding-bottom: 182px;
-    padding-left: 69px;
     @include adaptiveValue( padding-top , 182 , 108 );
     @include adaptiveValue( padding-right , 69 , 14 );
     @include adaptiveValue( padding-bottom , 182 , 108 );
@@ -175,7 +148,6 @@
 .intro__right-title {
     font-family: var(--roboto-slab);
     color: #272727;
-    font-size: 32px;
     @include adaptiveValue( font-size , 32 , 19 );
     max-width: 371px;
     text-align: center;
@@ -189,7 +161,6 @@
     flex-direction: column;
     align-items: center;
     gap: 41px;
-    font-size: 32px;
     @include adaptiveValue( font-size , 32 , 19 );
 }
 
@@ -202,9 +173,7 @@
     font-weight: 700;
     color: #272727;
     text-transform: uppercase;
-    margin-bottom: 43px;
     text-align: center;
-    font-size: 28px;
     @include adaptiveValue( font-size , 28 , 18 );
     @include adaptiveValue( margin-bottom , 43 , 25 );
 }
@@ -212,57 +181,30 @@
 .achievements__cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 66px;
-    row-gap: 192px;
     @include adaptiveValue( row-gap , 192 , 20 );
     @include adaptiveValue( column-gap , 66 , 33 , 1920 , 700 );
 
     .achievements__card {
-        border-radius: 8px;
         @include adaptiveValue( border-radius , 8 , 3 );
     }
     
-    .achievements__card:nth-child(1) {
-        font-family: var(--roboto-condensed);
-        text-transform: uppercase;
-        padding-top: 186px;
-        padding-left: 46px;
-        padding-right: 30px;
-        @include adaptiveValue( padding-top , 186 , 75 );
-        @include adaptiveValue(  padding-left , 46 , 21 );
-    }
-
-    .achievements__card:nth-child(2) {
-        font-family: var(--roboto-condensed);
-        text-transform: uppercase;
-        padding-top: 186px;
-        padding-left: 46px;
-        padding-right: 30px;
-        @include adaptiveValue( padding-top , 186 , 75 );
-        @include adaptiveValue(  padding-left , 46 , 21 );
-    }
-
+    .achievements__card:nth-child(1),
+    .achievements__card:nth-child(2),
     .achievements__card:nth-child(3) {
         font-family: var(--roboto-condensed);
         text-transform: uppercase;
-        padding-top: 186px;
-        padding-left: 46px;
         padding-right: 30px;
         @include adaptiveValue( padding-top , 186 , 75 );
         @include adaptiveValue(  padding-left , 46 , 21 );
     }
 
     .achievements__card:nth-child(4) {
-        height: 132px;
         display: flex;
         justify-content: center;
         align-items: center;
         align-self: end;
-        border-bottom-left-radius: 22px;
-        border-bottom-right-radius: 22px;
         p {
             font-family: var(--sf-pro-display);
-            font-size: 34px;
             @include adaptiveValue( font-size , 34 , 20 );
         }
         @include adaptiveValue( height , 132 , 65 );
@@ -275,13 +217,11 @@
     }
 }
 .achievements__card {
-    height: 414px;
     @include adaptiveValue( height , 414 , 186 );
     background: linear-gradient(306deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(252, 88, 134, 0.83) 42.57%, rgba(253, 88, 119, 0.65) 59.9%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
     
 }
 .achievements__card-text {
-    font-size: 32px;
     @include adaptiveValue( font-size , 32 , 15 );
 }
 
@@ -299,8 +239,6 @@
     font-weight: 700;
     color: #2e2e2e;
     text-transform: uppercase;
-    font-size: 32px;
-    margin-bottom: 43px;
     text-align: center;
     @include adaptiveValue( font-size , 32 , 18 );
     @include adaptiveValue( margin-bottom , 43 , 25 );
@@ -310,9 +248,7 @@
     font-family: var(--roboto-slab);
     font-weight: 700;
     color: #2e2e2e;
-    font-size: 32px;
     font-weight: 700;
-    margin-bottom: 43px;
     text-align: left;
     @include adaptiveValue( font-size , 32 , 18 );
     @include adaptiveValue( margin-bottom , 43 , 25 );
@@ -321,47 +257,17 @@
 .principles__cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 116px;
-    row-gap: 152px;
     @include adaptiveValue( row-gap , 152 , 20 );
     @include adaptiveValue( column-gap , 116 , 50 , 1920 , 700 );
 
-
     .principles__card {
-        border-radius: 8px;
         @include adaptiveValue( border-radius , 8 , 3 );
     }
 
-    .principles__card:nth-child(1) {
+    .principles__card:nth-child(1),
+    .principles__card:nth-child(2),
+    .principles__card:nth-child(3){
         text-transform: uppercase;
-        padding-top: 186px;
-        padding-left: 46px;
-        padding-right: 30px;
-        p {
-            font-family: var(--roboto-condensed);
-            color: #2e2e2e;
-        }
-        @include adaptiveValue( padding-top , 186 , 60 );
-        @include adaptiveValue(  padding-left , 46 , 21 );
-    }
-
-    .principles__card:nth-child(2) {
-        text-transform: uppercase;
-        padding-top: 186px;
-        padding-left: 46px;
-        padding-right: 30px;
-        p {
-            font-family: var(--roboto-condensed);
-            color: #2e2e2e;
-        }
-        @include adaptiveValue( padding-top , 186 , 60 );
-        @include adaptiveValue(  padding-left , 46 , 21 );
-    }
-
-    .principles__card:nth-child(3) {
-        text-transform: uppercase;
-        padding-top: 186px;
-        padding-left: 46px;
         padding-right: 30px;
         p {
             font-family: var(--roboto-condensed);
@@ -372,13 +278,10 @@
     }
 
     .principles__card:nth-child(4) {
-        height: 132px;
         display: flex;
         justify-content: center;
         align-items: center;
         align-self: end;
-        border-bottom-left-radius: 22px;
-        border-bottom-right-radius: 22px;
         p {
             font-family: var(--sf-pro-display);
             color: #2e2e2e;
@@ -394,13 +297,10 @@
     }
 }
 .principles__card {
-    height: 531px;
     @include adaptiveValue( height , 531 , 246 );
     background: linear-gradient(306deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(252, 88, 134, 0.83) 42.57%, rgba(253, 88, 119, 0.65) 59.9%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
 }
 .principles__card-text {
-    font-size: 32px;
-    
     @include adaptiveValue( font-size , 32 , 15 );
 }
 //Section principles end
@@ -415,9 +315,7 @@
     font-weight: 700;
     text-transform: uppercase;
     color: #2e2e2e;
-    font-size: 48px;
     text-align: center;
-    margin-bottom: 193px;
     @include adaptiveValue( font-size , 48 , 18 );
     @include adaptiveValue( margin-bottom , 193 , 70 );
 }
@@ -428,9 +326,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
-    padding-left: 160px;
-    padding-right: 190px;
     @include adaptiveValue( padding-left , 160 , 0 , 1920 , 700 , 1);
     @include adaptiveValue( padding-right  , 190 , 0 , 1920 , 700  , 1);
     @include adaptiveValue( gap , 50 , 5 );
@@ -439,12 +334,10 @@
     }
 }
 .team__body-text {
-    font-size: 43px;
     @include adaptiveValue( font-size , 43 , 15 );
     max-width: 526px;
 }
 .team__body-image {
-    width: 470px;
     @include adaptiveValue( width , 470 , 158 );
 }
 //Section team end

@@ -2,8 +2,6 @@
 .services-intro {
     display: flex;
     flex-direction: column;
-    margin-top: 66px;
-    margin-bottom: 65px;
     @include adaptiveValue( margin-top , 66 , 48 );
     @include adaptiveValue( margin-bottom,  65 , 28  );
 }
@@ -12,42 +10,30 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 90px;
-    margin-bottom: 146px;
     @include adaptiveValue( gap , 90 , 28 );
     @include adaptiveValue( margin-bottom , 146 , 18 );
 }
 .services-intro__text-title {
-    font-size: 87px;
     font-family: var(--roboto-condensed);
     color: #2e2e2e;
     text-transform: uppercase;
     white-space: nowrap;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( font-size, 87,19 );
-    }
+    @include adaptiveValue( font-size, 87,19 );
 }
 .services-intro__text-subtitle {
-    font-size: 46px;
     font-family: var(--roboto-condensed);
     color: #2e2e2e;
     font-weight: 300;
     letter-spacing: -2.05px;
     max-width: 665px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(font-size ,46 ,12 );
-    }
+    @include adaptiveValue(font-size ,46 ,12 );
     @media (max-width: 700px) {
         letter-spacing: -0.75px;
     }
-
 }
 .services-intro__images {
     display: flex;
     justify-content: space-between;
-    gap: 277px;
-    padding-right: 115px;
-    margin-bottom: 130px;
     @include adaptiveValue( padding-right , 115 , 28 );
     @include adaptiveValue( margin-bottom , 130 , 28 );
     @include adaptiveValue( gap , 277 , 60 );
@@ -60,24 +46,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 103px;
     background: linear-gradient(white, white) padding-box, 
                     linear-gradient(90deg, #f857a6, #923362) border-box;
-    border-width: 2px;
     border-style: solid;
     border-color: transparent;
-    border-radius: 51.5px;
     &:hover {
         background: var(--hover-button-color);
     }
-    @include adaptiveValue(height  , 103 , 22 );
+    @include adaptiveValue(height , 103 , 22 );
     @include adaptiveValue( border-radius , 51.5 , 11 );
     @include adaptiveValue( border-width , 2 , 0.5 );
 }
 
 
 .services-intro__link-text {
-    font-size: 37px;
     background: linear-gradient(270deg, #f857a6 0%, #923362 100%);
     background-clip: text;
     color: transparent;
@@ -94,142 +76,96 @@
 .services-cards__body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 107px;
-    row-gap: 92px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(column-gap ,107 ,23 );
-        @include adaptiveValue(row-gap  , 92 , 20 );
-    }
+    @include adaptiveValue(column-gap ,107 ,23 );
+    @include adaptiveValue(row-gap  , 92 , 20 );
 }
 .services-cards__card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 53px;
     background: linear-gradient(164deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(253, 88, 119, 0.65) 55%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
-    border-radius: 50px;
-    padding-top: 65px;
-    padding-bottom: 54px;
-    padding-left: 77px;
-    padding-right: 77px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(padding-top ,65 ,14 );
-        @include adaptiveValue( padding-bottom , 54 , 13);
-        @include adaptiveValue( padding-left , 77 , 10 );
-        @include adaptiveValue( padding-right , 77 , 10);
-        @include adaptiveValue( border-radius , 50 , 10  );
-        @include adaptiveValue( gap , 53 , 11 );
-    }
-    
+    @include adaptiveValue(padding-top ,65 ,14 );
+    @include adaptiveValue( padding-bottom , 54 , 13);
+    @include adaptiveValue( padding-left , 77 , 10 );
+    @include adaptiveValue( padding-right , 77 , 10);
+    @include adaptiveValue( border-radius , 50 , 10  );
+    @include adaptiveValue( gap , 53 , 11 );
 }
 
 .services-cards__title {
-    font-size: 50px;
     text-align: center;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( font-size,50 ,13 );
-    }
+    @include adaptiveValue( font-size,50 ,13 );
 }
 .services-cards__subtitle {
-    font-size: 37px;
     max-width: 507px;
     text-align: center;
     font-weight: 300;
     letter-spacing: -1.27px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( font-size ,37 ,11 );
-    }
+    @include adaptiveValue( font-size ,37 ,11 );
     @media (max-width: 700px) {
         letter-spacing: -0.46px;
     }
     @media (max-width: 320px) {
         letter-spacing: -0.28px
     }
-    
 }
 
 .services-cards__logo {
-    height: 259px;
     width: auto;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( height , 259 , 56 );
-    }
+    @include adaptiveValue( height , 259 , 56 );
 }
 //Section services-cards end
 
 //Section services-why start
 .services-why {
-    margin-bottom: 65px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( margin-bottom, 65 , 28 );
-    }
+    @include adaptiveValue( margin-bottom, 65 , 28 );
 }
 
 .services-why__intro {
     font-family: var(--roboto-condensed);
-    font-size: 87px;
     color: #2e2e2e;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 164px;
     @include adaptiveValue( font-size , 87 , 19 );
     @include adaptiveValue( margin-bottom , 164 , 27 );
-
 }
 
 .services-why__image {
-    width: 258px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(width ,258 ,56 );
-    }
+    @include adaptiveValue(width ,258 ,56 );
 }
 
 .services-why__body {
     display: flex;
     flex-direction: column;
-    padding-top: 112px;
-    padding-right: 170px;
-    padding-bottom: 146px;
-    padding-left: 50px;
-    border-radius: 100px;
     position: relative; /* необходим для корректной работы box-shadow */
     box-shadow: 0 0 60px rgba(235, 69, 146, 0.5);
     margin-bottom: 165px;
     .services-why__item:nth-child(4) {
         margin-bottom: 0px;
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue(padding-top ,112 ,20 );
-        @include adaptiveValue( padding-right , 170 , 12 );
-        @include adaptiveValue( padding-bottom , 146 , 20 );
-        @include adaptiveValue( padding-left , 50 , 16 );
-        @include adaptiveValue( border-radius , 100 , 20 );
-    }
+    @include adaptiveValue(padding-top ,112 ,20 );
+    @include adaptiveValue(padding-right , 170 , 12 );
+    @include adaptiveValue(padding-bottom , 146 , 20 );
+    @include adaptiveValue(padding-left , 50 , 16 );
+    @include adaptiveValue(border-radius , 100 , 20 );
+    
 }
 .services-why__item {
     display: flex;
     align-items: center;
-    gap: 61px;
-    margin-bottom: 133px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(gap , 61, 23 );
-        @include adaptiveValue( margin-bottom , 133 , 20 );
-    }
+    @include adaptiveValue(gap , 61, 23 );
+    @include adaptiveValue(margin-bottom , 133 , 20 );
 }
 
 .services-why__text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 125px;
     max-width: 800px;
-    letter-spacing: -4.66px;
-
-    @media (max-width: 1920px) {
-        @include adaptiveValue( gap , 125 , 30 );
-    }
+    @include adaptiveValue( gap , 125 , 30 );
+    @include adaptiveValue( letter-spacing , -4.66 , -1.7 , 1920, 701 , 1 );
     @media (max-width: 700px) {
-        letter-spacing: 1.7px;
+        letter-spacing: -1.7px;
     }
     @media (max-width: 480px) {
         letter-spacing: -1.49px;
@@ -239,54 +175,39 @@
     }
 }
 .services-why__title {
-    font-size: 65px;
     font-weight: 700;
     white-space: nowrap;
-
     background: linear-gradient(270deg, #f857a6 0%, #923362 100%);
     background-clip: text;
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(font-size , 65 , 16 );
-    }
+    @include adaptiveValue(font-size , 65 , 16 );
 }
 .services-why__subtitle {
-    font-size: 50px;
     background: linear-gradient(270deg, #f857a6 0%, #923362 100%);
     background-clip: text;
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    @media (max-width: 1920px) {
-        @include adaptiveValue(font-size , 50 , 14 );
-    }
+    @include adaptiveValue(font-size , 50 , 14 );
 }
 
 .services-why__link {
-    height: 286px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(126deg, #f958a1 0%, rgba(251, 88, 141, 0.98) 10%, rgba(251, 88, 135, 0.91) 23%, rgba(252, 88, 133, 0.8) 39%, rgba(252, 88, 134, 0.83) 42.57%, rgba(253, 88, 119, 0.65) 59.9%, rgba(253, 88, 118, 0.48) 73%, rgba(255, 88, 101, 0.23) 91%, rgba(255, 89, 91, 0.21) 100%);
-    border-bottom-left-radius: 47px;
-    border-bottom-right-radius: 47px;
     &:hover {
         background: var(--hover-button-color);
     }
-    @media (max-width: 1920px) {
-        @include adaptiveValue( height , 286 , 65 );
-        @include adaptiveValue( border-bottom-left-radius , 47 , 10 );
-        @include adaptiveValue( border-bottom-right-radius , 47 , 10 );
-    }
+    @include adaptiveValue( height , 286 , 65 );
+    @include adaptiveValue( border-bottom-left-radius , 47 , 10 );
+    @include adaptiveValue( border-bottom-right-radius , 47 , 10 );
 }
 .services-why__link-text {
-    font-size: 65px;
     font-family: var(--sf-pro-display);
-    @media (max-width: 1920px) {
-        @include adaptiveValue( font-size , 65 , 18 );
-    }
+    @include adaptiveValue( font-size , 65 , 18 );
 }
 //Section services-why end
 
@@ -295,29 +216,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 238px;
-    margin-bottom: 130px;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( gap , 238 , 43 );
-        @include adaptiveValue( margin-bottom , 130 , 100 );
-    }
+    @include adaptiveValue( gap , 238 , 43 );
+    @include adaptiveValue( margin-bottom , 130 , 100 );
 }
 
 .services-child__title {
-    font-size: 60px;
     font-weight: 500;
     color: #727272;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( font-size , 60 , 13 );
-    }
+    @include adaptiveValue( font-size , 60 , 13 );
 }
 .services-child__subtitle {
-    font-size: 50px;
     color: #727272;
     text-align: center;
     font-weight: 300;
-    @media (max-width: 1920px) {
-        @include adaptiveValue( font-size , 50 , 11 );
-    }
+    @include adaptiveValue( font-size , 50 , 11 );
 }
 //Section services-child end

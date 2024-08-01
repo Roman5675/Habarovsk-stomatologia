@@ -8,8 +8,6 @@
         align-items: center;
         margin-top: 17px;
     }
-    
-    
 }
 
 .header__fixed {
@@ -23,9 +21,6 @@
 
 .header__logo {
     margin: 0px auto;
-    width: 262px;
-    margin-top: 34px;
-    margin-bottom: 44px;
     @include adaptiveValue( margin-top , 34 , 12 , 1920 , 700 , 1 );
     @include adaptiveValue( margin-bottom , 44 , 24 , 1920 , 700 , 1 );
     @include adaptiveValue( width , 262 , 55 );
@@ -37,14 +32,11 @@
 
 .header__logo-mobile {
     display: none;
-    width: 294px;
     margin: 0px auto;
     @include adaptiveValue( width , 294 , 198 , 480 , 320 , 1 );
     @media (max-width: 699px) {
         display: flex;
         justify-content: center;
-        margin-top: 28px;
-        margin-bottom: 70px;
         @include adaptiveValue( margin-top , 28 , 19 , 480 , 320 , 1 );
         @include adaptiveValue( margin-bottom , 70 , 26 , 480 , 320 , 1 );
     }
@@ -67,7 +59,6 @@ body._lock {
         align-items: center;
         gap: 25px;
         font-weight: 500;
-        margin-bottom: 70px;
         @include adaptiveValue( margin-bottom , 70 , 26 , 480 , 320 , 1 );
     }
 }
@@ -76,9 +67,7 @@ body._lock {
     color: #AF5871;
 }
 
-
 .menu__link {
-    font-size: 34px;
     @include adaptiveValue( font-size , 34 , 14 , 1920 , 700 , 1 );
     @media (max-width: 699px) {
         letter-spacing: -0.62px;
@@ -90,7 +79,6 @@ body._lock {
     display: none;
     color: #cfb28f;
     font-family: 'Roboto Condensed';
-    font-size: 24px;
     font-weight: 700;
     @include adaptiveValue( font-size , 24 , 19 , 699 , 320 , 1 );
 }
@@ -110,8 +98,6 @@ body._lock {
         }
     }
 
-    
-    
     //Список при открытом бургере
 
     .menu__body {
@@ -122,7 +108,6 @@ body._lock {
         z-index: 99;
         background: #bfe8f5;
         transition: left 0.3s ease 0s;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -137,7 +122,6 @@ body._lock {
                color: #D8EFE3;
             }
         }
-        
     }
     //
 }
@@ -158,7 +142,7 @@ body._lock {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    @include adaptiveValue(border-radius  , 21 , 14 , 480 , 320 , 1);
+    @include adaptiveValue(border-radius , 21 , 14 , 480 , 320 , 1);
     @include adaptiveValue( margin-bottom , 29 , 19 , 480 , 320 , 1);
     &:hover {
         background: var(--hover-button-color);
@@ -168,10 +152,6 @@ body._lock {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 17px;
-    letter-spacing: -2.61px;
-    width: 152px;
-    height: 43px;
     @include adaptiveValue( font-size , 17 , 12 , 480 , 320 , 1);
     @include adaptiveValue( letter-spacing , -2.61 , -0.73);
     @include adaptiveValue( width , 152 , 102 , 480 , 320 , 1 );
@@ -183,4 +163,3 @@ body._lock {
     margin-right: 5px;
     color: #3EEB45;
 }
-
